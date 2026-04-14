@@ -1,32 +1,46 @@
 @import "tailwindcss";
 
 /* ============================================================
-   SYSTÈME DE DESIGN — TOITURE EXPERT BELGIQUE
-   Archétype : Tactical Telemetry / Swiss Industrial Print
-   Mode : Dark — substrat #0F0F0F
+   SYSTÈME DE DESIGN — M BUILD 360
+   Archétype : Maçonnerie Industrielle
+   Mode : Dark — substrat ardoise chaude #18130E
    ============================================================ */
 
 :root {
-  /* Substrat */
-  --zinc:         #0F0F0F;
-  --zinc-mid:     #1A1A1A;
-  --zinc-raised:  #222222;
-  --zinc-border:  rgba(255, 255, 255, 0.065);
+  /* ── Ardoise & pierre — substrat chantier ── */
+  --zinc:         #18130E;   /* ardoise chaude */
+  --zinc-mid:     #211710;   /* pierre levée */
+  --zinc-raised:  #2C1F14;   /* surface haute */
+  --zinc-border:  rgba(215, 190, 158, 0.08);
 
-  /* Accent unique — Orange de sécurité aérien */
-  --orange:        #E8500A;
-  --orange-hover:  #C44008;
-  --orange-dim:    rgba(232, 80, 10, 0.10);
-  --orange-border: rgba(232, 80, 10, 0.32);
-  --orange-glow:   rgba(232, 80, 10, 0.18);
+  /* ── Brique flamande — accent primaire ── */
+  --orange:        #8C3518;  /* brique belge profonde */
+  --orange-hover:  #A84826;
+  --orange-dim:    rgba(140, 53, 24, 0.10);
+  --orange-border: rgba(140, 53, 24, 0.32);
+  --orange-glow:   rgba(140, 53, 24, 0.18);
 
-  /* Texte */
-  --white:         #EDECEA;
-  --white-mid:     rgba(237, 236, 234, 0.65);
-  --white-dim:     rgba(237, 236, 234, 0.38);
+  /* ── Terre cuite — accent secondaire ── */
+  --terra:         #C46030;
+  --terra-dim:     rgba(196, 96, 48, 0.12);
+  --terra-border:  rgba(196, 96, 48, 0.28);
 
-  /* Grille de construction */
-  --grid-line:     rgba(255, 255, 255, 0.055);
+  /* ── Pierre calcaire & mortier — neutrals ── */
+  --pierre:        #9A8870;  /* mortier / calcaire */
+  --sable:         #C4A878;  /* sable / pierre dorée */
+
+  /* ── Sémantique (noms maintenus pour compatibilité) ── */
+  --brick:         #8C3518;
+  --concrete:      #211710;
+  --anthracite:    #0E0A07;
+
+  /* ── Parchemin — texte chaud ── */
+  --white:         #F2E8D4;  /* parchemin lin */
+  --white-mid:     rgba(242, 232, 212, 0.65);
+  --white-dim:     rgba(242, 232, 212, 0.35);
+
+  /* ── Grille de chantier — tracés chaleureux ── */
+  --grid-line:     rgba(245, 220, 185, 0.055);
 
   /* Spring physics cubic-bezier */
   --ease-spring:   cubic-bezier(0.32, 0.72, 0, 1);
@@ -170,7 +184,7 @@ body::after {
 .btn-primary:hover {
   background-color: var(--orange-hover);
   transform: translate(-3px, -3px);
-  box-shadow: 5px 5px 0px rgba(232, 80, 10, 0.4);
+  box-shadow: 5px 5px 0px rgba(140, 53, 24, 0.4);
 }
 
 .btn-primary:active {
@@ -191,7 +205,7 @@ body::after {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 18px 40px;
-  border: 1px solid rgba(237, 236, 234, 0.2);
+  border: 1px solid rgba(232, 226, 217, 0.2);
   cursor: pointer;
   touch-action: manipulation;
   transition:
@@ -205,8 +219,8 @@ body::after {
 }
 
 .btn-secondary:hover {
-  border-color: rgba(237, 236, 234, 0.55);
-  background-color: rgba(237, 236, 234, 0.04);
+  border-color: rgba(232, 226, 217, 0.55);
+  background-color: rgba(232, 226, 217, 0.04);
 }
 
 .btn-secondary:active {
@@ -255,7 +269,7 @@ body::after {
   background: linear-gradient(
     90deg,
     var(--orange) 0%,
-    rgba(232, 80, 10, 0.28) 55%,
+    rgba(140, 53, 24, 0.28) 55%,
     transparent 100%
   );
 }
@@ -283,7 +297,7 @@ body::after {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--orange) 0%, rgba(232, 80, 10, 0.5) 100%);
+  background: linear-gradient(90deg, var(--orange) 0%, rgba(155, 55, 34, 0.5) 100%);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s var(--ease-spring);
@@ -294,18 +308,18 @@ body::after {
 }
 
 .service-card:hover {
-  border-color: rgba(232, 80, 10, 0.28);
+  border-color: rgba(140, 53, 24, 0.28);
   background: var(--zinc-raised);
   transform: translateY(-6px);
   box-shadow:
     0 28px 56px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(232, 80, 10, 0.12);
+    0 0 0 1px rgba(140, 53, 24, 0.12);
 }
 
 /* Icône flèche — cinétique au hover de la carte parente */
 .service-card:hover .card-arrow {
   transform: translate(3px, -3px);
-  border-color: rgba(232, 80, 10, 0.45);
+  border-color: rgba(140, 53, 24, 0.45);
 }
 
 /* Zoom photo au hover */
@@ -341,8 +355,8 @@ body::after {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(237, 236, 234, 0.05);
-  border: 1px solid rgba(237, 236, 234, 0.12);
+  background: rgba(232, 226, 217, 0.05);
+  border: 1px solid rgba(232, 226, 217, 0.12);
   color: var(--white-dim);
   font-family: var(--font-mono), monospace;
   font-size: 10px;
@@ -385,7 +399,7 @@ body::after {
 }
 
 .faq-trigger:hover {
-  border-bottom-color: rgba(232, 80, 10, 0.4);
+  border-bottom-color: rgba(140, 53, 24, 0.4);
 }
 
 .faq-trigger[data-open="true"] {
@@ -421,8 +435,8 @@ body::after {
    ANIMATIONS SYSTÈME
    ============================================================ */
 @keyframes pulse-orange {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 80, 10, 0.45); }
-  50%       { box-shadow: 0 0 0 14px rgba(232, 80, 10, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(140, 53, 24, 0.45); }
+  50%       { box-shadow: 0 0 0 14px rgba(155, 55, 34, 0); }
 }
 
 @keyframes pulse-green {
@@ -494,7 +508,7 @@ body::after {
    ============================================================ */
 .input-industrial {
   width: 100%;
-  background: rgba(26, 26, 26, 0.9);
+  background: rgba(30, 27, 24, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.09);
   color: var(--white);
   padding: 16px 20px;
@@ -508,7 +522,7 @@ body::after {
 }
 
 .input-industrial::placeholder {
-  color: rgba(237, 236, 234, 0.25);
+  color: rgba(232, 226, 217, 0.25);
 }
 
 .input-industrial:focus {
@@ -547,7 +561,7 @@ body::after {
   transition: color 0.2s var(--ease-out-expo);
 }
 
-.footer-link-sm:hover { color: rgba(237, 236, 234, 0.75); }
+.footer-link-sm:hover { color: rgba(232, 226, 217, 0.75); }
 
 /* ============================================================
    BORDURE DE SÉCURITÉ
@@ -604,7 +618,7 @@ body::after {
     padding: 28px 24px;
     margin-left: 0;
     /* dégradé opaque pour lisibilité */
-    background: linear-gradient(to top, rgba(15,15,15,0.96) 0%, rgba(15,15,15,0.72) 100%);
+    background: linear-gradient(to top, rgba(22,20,18,0.96) 0%, rgba(22,20,18,0.72) 100%);
   }
 
   /* Sections : padding réduit pour respirer sur petit écran */

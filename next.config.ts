@@ -19,6 +19,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       // Picsum Photos — images de substitution (hero vidéo fallback)
       new URL("https://picsum.photos/**"),
+      // Unsplash — photos de maçonnerie haute résolution
+      new URL("https://images.unsplash.com/**"),
     ],
   },
 

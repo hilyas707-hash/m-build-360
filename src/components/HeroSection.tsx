@@ -45,7 +45,7 @@ export default function HeroSection() {
       for (const p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(232,80,10,${p.opacity})`;
+        ctx.fillStyle = `rgba(140,53,24,${p.opacity})`;
         ctx.fill();
         p.x += p.vx;
         p.y += p.vy;
@@ -73,13 +73,13 @@ export default function HeroSection() {
         overflow:      "hidden",
         paddingTop:    "108px",
         paddingBottom: "96px",
-        background:    "#0F0F0F",
+        background:    "#18130E",
       }}
     >
       <video
         ref={videoRef}
         autoPlay muted loop playsInline preload="metadata"
-        poster="https://picsum.photos/seed/maconnerie-belgique/1920/1080"
+        poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
         aria-hidden="true"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", zIndex: 0 }}
       >
@@ -91,7 +91,7 @@ export default function HeroSection() {
       <div aria-hidden="true" style={{
         position: "absolute", inset: 0, zIndex: 2,
         background: [
-          "radial-gradient(ellipse at 15% 55%, rgba(232,80,10,0.11) 0%, transparent 52%)",
+          "radial-gradient(ellipse at 15% 55%, rgba(140,53,24,0.11) 0%, transparent 52%)",
           "radial-gradient(ellipse at 82% 8%,  rgba(15,15,15,0.55) 0%, transparent 52%)",
           "radial-gradient(ellipse at 50% 100%, rgba(15,15,15,0.45) 0%, transparent 55%)",
         ].join(", "),
@@ -101,7 +101,7 @@ export default function HeroSection() {
 
       <div aria-hidden="true" style={{
         position: "absolute", left: 0, top: 0, bottom: 0, width: "3px",
-        background: "linear-gradient(180deg, transparent 0%, #E8500A 18%, #E8500A 82%, transparent 100%)",
+        background: "linear-gradient(180deg, transparent 0%, #8C3518 18%, #8C3518 82%, transparent 100%)",
         zIndex: 5,
       }} />
 
@@ -112,11 +112,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={SPRING}
-          style={{ fontSize: "clamp(52px, 9.5vw, 136px)", color: "#EDECEA" }}
+          style={{ fontSize: "clamp(52px, 9.5vw, 136px)", color: "#F2E8D4" }}
         >
           Bâtir solide,
           <br />
-          <span style={{ color: "#E8500A" }}>construire juste,</span>
+          <span style={{ color: "#8C3518" }}>construire juste,</span>
           <br />
           livrer complet.
         </motion.h1>
@@ -135,7 +135,7 @@ export default function HeroSection() {
           transition={{ ...SPRING_FAST, delay: 0.4 }}
           style={{
             fontSize: "clamp(15px, 1.8vw, 18px)",
-            color: "rgba(237,236,234,0.62)",
+            color: "rgba(242,232,212,0.62)",
             lineHeight: 1.72,
             maxWidth: "560px",
             marginBottom: "44px",

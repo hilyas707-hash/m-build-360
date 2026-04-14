@@ -123,7 +123,7 @@ export default function ServicesPageContent() {
           paddingTop:    "140px",
           paddingBottom: "72px",
           overflow:      "hidden",
-          background:    "#0F0F0F",
+          background:    "#18130E",
         }}
       >
         {/* Ligne orange gauche */}
@@ -131,7 +131,7 @@ export default function ServicesPageContent() {
           aria-hidden="true"
           style={{
             position: "absolute", left: 0, top: 0, bottom: 0, width: "3px",
-            background: "linear-gradient(180deg, transparent 0%, #E8500A 20%, #E8500A 80%, transparent 100%)",
+            background: "linear-gradient(180deg, transparent 0%, #8C3518 20%, #8C3518 80%, transparent 100%)",
           }}
         />
 
@@ -146,7 +146,7 @@ export default function ServicesPageContent() {
             fontSize:      "9px",
             fontWeight:    700,
             letterSpacing: "0.14em",
-            color:         "rgba(232,80,10,0.3)",
+            color:         "rgba(140,53,24,0.3)",
             textTransform: "uppercase",
             lineHeight:    1.8,
           }}
@@ -160,11 +160,11 @@ export default function ServicesPageContent() {
           {/* Fil d'Ariane */}
           <div
             className="font-mono-label"
-            style={{ color: "rgba(237,236,234,0.3)", marginBottom: "28px", display: "flex", gap: "8px" }}
+            style={{ color: "rgba(242,232,212,0.3)", marginBottom: "28px", display: "flex", gap: "8px" }}
           >
             <a href="/" style={{ color: "inherit", textDecoration: "none" }}>Accueil</a>
             <span>›</span>
-            <span style={{ color: "rgba(232,80,10,0.7)" }}>Services</span>
+            <span style={{ color: "rgba(140,53,24,0.7)" }}>Services</span>
           </div>
 
           <motion.div
@@ -177,7 +177,7 @@ export default function ServicesPageContent() {
                 aria-hidden="true"
                 style={{
                   width: "5px", height: "5px", borderRadius: "50%",
-                  background: "#E8500A",
+                  background: "#8C3518",
                   animation: "pulse-orange 2s cubic-bezier(0.65,0,0.35,1) infinite",
                   flexShrink: 0,
                 }}
@@ -191,11 +191,11 @@ export default function ServicesPageContent() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...SPRING, delay: 0.07 }}
-            style={{ fontSize: "clamp(44px, 8vw, 112px)", color: "#EDECEA" }}
+            style={{ fontSize: "clamp(44px, 8vw, 112px)", color: "#F2E8D4" }}
           >
             Nos prestations
             <br />
-            <span style={{ color: "#E8500A" }}>en toiture</span>
+            <span style={{ color: "#8C3518" }}>en toiture</span>
           </motion.h1>
 
           <motion.div
@@ -213,7 +213,7 @@ export default function ServicesPageContent() {
             style={{
               marginTop:  "28px",
               fontSize:   "clamp(14px, 1.6vw, 17px)",
-              color:      "rgba(237,236,234,0.58)",
+              color:      "rgba(242,232,212,0.58)",
               lineHeight: 1.72,
               maxWidth:   "560px",
               textWrap:   "pretty" as "pretty",
@@ -270,7 +270,7 @@ export default function ServicesPageContent() {
                     }}
                   />
                   {/* Dégradé progressif carte → image :
-                      La carte (var(--zinc-mid) = #1A1A1A) fond vers l'image en dégradé étendu.
+                      La carte (var(--zinc-mid) = #211710) fond vers l'image en dégradé étendu.
                       isEven  → contenu à gauche : dégradé part de droite vers transparent
                       !isEven → contenu à droite : dégradé part de gauche vers transparent        */}
                   <div
@@ -278,8 +278,8 @@ export default function ServicesPageContent() {
                     style={{
                       position: "absolute", inset: 0,
                       background: isEven
-                        ? "linear-gradient(to left,  rgba(26,26,26,0) 0%, rgba(26,26,26,0.18) 30%, rgba(26,26,26,0.72) 58%, rgba(26,26,26,0.96) 78%, #1A1A1A 100%)"
-                        : "linear-gradient(to right, rgba(26,26,26,0) 0%, rgba(26,26,26,0.18) 30%, rgba(26,26,26,0.72) 58%, rgba(26,26,26,0.96) 78%, #1A1A1A 100%)",
+                        ? "linear-gradient(to left,  rgba(26,26,26,0) 0%, rgba(26,26,26,0.18) 30%, rgba(26,26,26,0.72) 58%, rgba(26,26,26,0.96) 78%, #211710 100%)"
+                        : "linear-gradient(to right, rgba(26,26,26,0) 0%, rgba(26,26,26,0.18) 30%, rgba(26,26,26,0.72) 58%, rgba(26,26,26,0.96) 78%, #211710 100%)",
                     }}
                   />
                   {/* ID grand fond */}
@@ -315,7 +315,7 @@ export default function ServicesPageContent() {
                   }}
                 >
                   {/* Méta */}
-                  <div className="font-mono-label" style={{ color: "#E8500A", marginBottom: "16px" }}>
+                  <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "16px" }}>
                     {s.id} — {s.subtitle}
                   </div>
 
@@ -323,7 +323,7 @@ export default function ServicesPageContent() {
                     className="font-industrial-md"
                     style={{
                       fontSize:     "clamp(24px, 3vw, 38px)",
-                      color:        "#EDECEA",
+                      color:        "#F2E8D4",
                       marginBottom: "20px",
                     }}
                   >
@@ -335,7 +335,7 @@ export default function ServicesPageContent() {
                   <p
                     style={{
                       fontSize:     "14px",
-                      color:        "rgba(237,236,234,0.58)",
+                      color:        "rgba(242,232,212,0.58)",
                       lineHeight:   1.8,
                       marginBottom: "28px",
                       textWrap:     "pretty" as "pretty",
@@ -361,11 +361,11 @@ export default function ServicesPageContent() {
                       >
                         <CheckSquare
                           size={13}
-                          color="#E8500A"
+                          color="#8C3518"
                           style={{ flexShrink: 0, marginTop: "2px" }}
                           aria-hidden="true"
                         />
-                        <span style={{ fontSize: "13px", color: "rgba(237,236,234,0.62)", lineHeight: 1.55 }}>
+                        <span style={{ fontSize: "13px", color: "rgba(242,232,212,0.62)", lineHeight: 1.55 }}>
                           {item}
                         </span>
                       </li>
@@ -423,11 +423,11 @@ export default function ServicesPageContent() {
             </span>
             <h2
               className="font-industrial"
-              style={{ fontSize: "clamp(36px, 5.5vw, 80px)", color: "#EDECEA" }}
+              style={{ fontSize: "clamp(36px, 5.5vw, 80px)", color: "#F2E8D4" }}
             >
               Notre processus
               <br />
-              <span style={{ color: "#E8500A" }}>en 4 étapes</span>
+              <span style={{ color: "#8C3518" }}>en 4 étapes</span>
             </h2>
             <div className="tech-divider" style={{ marginTop: "40px", maxWidth: "480px" }} />
           </motion.div>
@@ -476,20 +476,20 @@ export default function ServicesPageContent() {
                 </span>
 
                 {/* Étape */}
-                <div className="font-mono-label" style={{ color: "#E8500A", marginBottom: "20px" }}>
+                <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "20px" }}>
                   Étape {step.number}
                 </div>
 
-                <div style={{ height: "2px", width: "32px", background: "#E8500A", marginBottom: "20px" }} />
+                <div style={{ height: "2px", width: "32px", background: "#8C3518", marginBottom: "20px" }} />
 
                 <h3
                   className="font-industrial-md"
-                  style={{ fontSize: "clamp(20px, 2.2vw, 28px)", color: "#EDECEA", marginBottom: "16px" }}
+                  style={{ fontSize: "clamp(20px, 2.2vw, 28px)", color: "#F2E8D4", marginBottom: "16px" }}
                 >
                   {step.title}
                 </h3>
 
-                <p style={{ fontSize: "13px", color: "rgba(237,236,234,0.52)", lineHeight: 1.75, textWrap: "pretty" as "pretty" }}>
+                <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.52)", lineHeight: 1.75, textWrap: "pretty" as "pretty" }}>
                   {step.description}
                 </p>
               </motion.div>
@@ -503,7 +503,7 @@ export default function ServicesPageContent() {
         style={{
           paddingTop:    "100px",
           paddingBottom: "120px",
-          background:    "#1A1A1A",
+          background:    "#211710",
           borderTop:     "1px solid rgba(255,255,255,0.06)",
         }}
       >
@@ -523,18 +523,18 @@ export default function ServicesPageContent() {
               className="font-industrial"
               style={{
                 fontSize:     "clamp(40px, 7vw, 96px)",
-                color:        "#EDECEA",
+                color:        "#F2E8D4",
                 marginBottom: "28px",
               }}
             >
               Votre toiture
               <br />
-              <span style={{ color: "#E8500A" }}>mérite mieux</span>
+              <span style={{ color: "#8C3518" }}>mérite mieux</span>
             </h2>
             <p
               style={{
                 fontSize:     "15px",
-                color:        "rgba(237,236,234,0.52)",
+                color:        "rgba(242,232,212,0.52)",
                 lineHeight:   1.75,
                 maxWidth:     "480px",
                 margin:       "0 auto 48px",

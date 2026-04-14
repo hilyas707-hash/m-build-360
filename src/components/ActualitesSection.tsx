@@ -78,16 +78,16 @@ export default function ActualitesSection() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: "40px", flexWrap: "wrap" }}>
             <h2
               className="font-industrial"
-              style={{ fontSize: "clamp(38px, 6vw, 84px)", color: "#EDECEA", maxWidth: "600px" }}
+              style={{ fontSize: "clamp(38px, 6vw, 84px)", color: "#F2E8D4", maxWidth: "600px" }}
             >
               Nouvelles
               <br />
-              <span style={{ color: "#E8500A" }}>réglementaires</span>
+              <span style={{ color: "#8C3518" }}>réglementaires</span>
             </h2>
             <p
               style={{
                 fontSize:  "13px",
-                color:     "rgba(237,236,234,0.45)",
+                color:     "rgba(242,232,212,0.45)",
                 lineHeight: 1.75,
                 maxWidth:  "340px",
                 textWrap:  "pretty" as "pretty",
@@ -135,7 +135,7 @@ export default function ActualitesSection() {
                   position:   "absolute",
                   top:        0, left: 0, right: 0,
                   height:     "2px",
-                  background: "linear-gradient(90deg, var(--orange) 0%, rgba(232,80,10,0.4) 100%)",
+                  background: "linear-gradient(90deg, var(--orange) 0%, rgba(140,53,24,0.4) 100%)",
                 }}
               />
 
@@ -150,10 +150,10 @@ export default function ActualitesSection() {
               {/* Date + durée */}
               <div
                 className="font-mono-label"
-                style={{ color: "rgba(232,80,10,0.6)", marginBottom: "18px", display: "flex", gap: "16px" }}
+                style={{ color: "rgba(140,53,24,0.6)", marginBottom: "18px", display: "flex", gap: "16px" }}
               >
                 <span>{a.date}</span>
-                <span style={{ color: "rgba(237,236,234,0.2)" }}>—</span>
+                <span style={{ color: "rgba(242,232,212,0.2)" }}>—</span>
                 <span>{a.readTime} DE LECTURE</span>
               </div>
 
@@ -162,7 +162,7 @@ export default function ActualitesSection() {
                 className="font-industrial-md"
                 style={{
                   fontSize:     "clamp(22px, 2.4vw, 32px)",
-                  color:        "#EDECEA",
+                  color:        "#F2E8D4",
                   marginBottom: "24px",
                   textWrap:     "balance" as "balance",
                 }}
@@ -177,7 +177,7 @@ export default function ActualitesSection() {
               <p
                 style={{
                   fontSize:     "14px",
-                  color:        "rgba(237,236,234,0.58)",
+                  color:        "rgba(242,232,212,0.58)",
                   lineHeight:   1.8,
                   textWrap:     "pretty" as "pretty",
                   flex:         1,
@@ -196,7 +196,7 @@ export default function ActualitesSection() {
                     fontSize:      "11px",
                     fontWeight:    700,
                     letterSpacing: "0.1em",
-                    color:         "#E8500A",
+                    color:         "#8C3518",
                     textDecoration: "none",
                     textTransform: "uppercase",
                     display:       "flex",
@@ -212,7 +212,7 @@ export default function ActualitesSection() {
                 </a>
                 <span
                   className="font-mono-label"
-                  style={{ color: "rgba(237,236,234,0.18)" }}
+                  style={{ color: "rgba(242,232,212,0.18)" }}
                 >
                   {a.id} / 03
                 </span>
@@ -254,7 +254,7 @@ export default function ActualitesSection() {
                   <span className="tag-white">{a.category}</span>
                   <span
                     className="font-mono-label"
-                    style={{ color: "rgba(237,236,234,0.22)" }}
+                    style={{ color: "rgba(242,232,212,0.22)" }}
                   >
                     {a.readTime}
                   </span>
@@ -262,7 +262,7 @@ export default function ActualitesSection() {
 
                 <div
                   className="font-mono-label"
-                  style={{ color: "rgba(232,80,10,0.5)", marginBottom: "14px" }}
+                  style={{ color: "rgba(140,53,24,0.5)", marginBottom: "14px" }}
                 >
                   {a.date}
                 </div>
@@ -271,7 +271,7 @@ export default function ActualitesSection() {
                   className="font-industrial-md"
                   style={{
                     fontSize:     "clamp(16px, 1.8vw, 22px)",
-                    color:        "#EDECEA",
+                    color:        "#F2E8D4",
                     marginBottom: "14px",
                     textWrap:     "balance" as "balance",
                     flex:         1,
@@ -285,7 +285,7 @@ export default function ActualitesSection() {
                 <p
                   style={{
                     fontSize:  "13px",
-                    color:     "rgba(237,236,234,0.5)",
+                    color:     "rgba(242,232,212,0.5)",
                     lineHeight: 1.72,
                   }}
                 >
@@ -302,7 +302,7 @@ export default function ActualitesSection() {
                     fontFamily:    "var(--font-mono), monospace",
                     fontSize:      "9px",
                     fontWeight:    700,
-                    color:         "rgba(232,80,10,0.2)",
+                    color:         "rgba(140,53,24,0.2)",
                     letterSpacing: "0.1em",
                   }}
                 >
@@ -322,8 +322,8 @@ export default function ActualitesSection() {
           style={{
             marginTop:      "3px",
             padding:        "40px 44px",
-            background:     "rgba(232,80,10,0.055)",
-            border:         "1px solid rgba(232,80,10,0.18)",
+            background:     "rgba(140,53,24,0.055)",
+            border:         "1px solid rgba(140,53,24,0.18)",
             display:        "flex",
             alignItems:     "center",
             justifyContent: "space-between",
@@ -334,11 +334,11 @@ export default function ActualitesSection() {
           <div>
             <div
               className="font-industrial-md"
-              style={{ fontSize: "clamp(16px, 2.4vw, 26px)", color: "#EDECEA", marginBottom: "6px" }}
+              style={{ fontSize: "clamp(16px, 2.4vw, 26px)", color: "#F2E8D4", marginBottom: "6px" }}
             >
               Vérifiez vos droits aux primes 2025
             </div>
-            <p style={{ fontSize: "13px", color: "rgba(237,236,234,0.45)" }}>
+            <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.45)" }}>
               Analyse gratuite de votre éligibilité selon votre commune et vos revenus.
             </p>
           </div>

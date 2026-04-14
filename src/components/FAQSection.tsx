@@ -63,7 +63,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
           fontFamily:    "var(--font-display), 'Arial Black', sans-serif",
           fontSize:      "clamp(14px, 1.8vw, 16px)",
           fontWeight:    400,
-          color:         open ? "#EDECEA" : "rgba(237,236,234,0.82)",
+          color:         open ? "#F2E8D4" : "rgba(242,232,212,0.82)",
           letterSpacing: "-0.015em",
           lineHeight:    1.4,
           textAlign:     "left",
@@ -74,13 +74,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         </span>
         <div style={{
           width:      "30px", height: "30px",
-          background: open ? "rgba(232,80,10,0.14)" : "rgba(255,255,255,0.04)",
-          border:     `1px solid ${open ? "rgba(232,80,10,0.38)" : "rgba(255,255,255,0.09)"}`,
+          background: open ? "rgba(140,53,24,0.14)" : "rgba(255,255,255,0.04)",
+          border:     `1px solid ${open ? "rgba(140,53,24,0.38)" : "rgba(255,255,255,0.09)"}`,
           display:    "flex", alignItems: "center", justifyContent: "center",
           flexShrink: 0,
           transition: "all 0.25s cubic-bezier(0.16,1,0.3,1)",
         }}>
-          {open ? <Minus size={13} color="#E8500A" aria-hidden="true" /> : <Plus size={13} color="rgba(237,236,234,0.45)" aria-hidden="true" />}
+          {open ? <Minus size={13} color="#8C3518" aria-hidden="true" /> : <Plus size={13} color="rgba(242,232,212,0.45)" aria-hidden="true" />}
         </div>
       </button>
       <AnimatePresence initial={false}>
@@ -95,7 +95,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             <p style={{
               padding:  "0 0 28px 0",
               fontSize: "14px",
-              color:    "rgba(237,236,234,0.58)",
+              color:    "rgba(242,232,212,0.58)",
               lineHeight: 1.82,
               maxWidth:   "720px",
               textWrap:   "pretty",
@@ -111,7 +111,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQSection() {
   return (
-    <section id="faq" style={{ paddingTop: "140px", paddingBottom: "140px", background: "#1A1A1A", position: "relative", overflow: "hidden" }}>
+    <section id="faq" style={{ paddingTop: "140px", paddingBottom: "140px", background: "#211710", position: "relative", overflow: "hidden" }}>
       <span className="bg-number" style={{ right: "-2%", top: "0" }}>03</span>
 
       <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "0 24px", position: "relative", zIndex: 1 }}>
@@ -124,10 +124,10 @@ export default function FAQSection() {
         >
           <span className="tag-orange" style={{ marginBottom: "24px", display: "inline-flex" }}>FAQ & Réassurance</span>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: "40px", flexWrap: "wrap" }}>
-            <h2 className="font-industrial" style={{ fontSize: "clamp(36px, 6vw, 80px)", color: "#F0EFE9", maxWidth: "600px" }}>
+            <h2 className="font-industrial" style={{ fontSize: "clamp(36px, 6vw, 80px)", color: "#F2E8D4", maxWidth: "600px" }}>
               Vos questions,
               <br />
-              <span style={{ color: "#E8500A" }}>nos réponses</span>
+              <span style={{ color: "#8C3518" }}>nos réponses</span>
             </h2>
             <p style={{ fontSize: "14px", color: "rgba(240,239,233,0.5)", lineHeight: 1.7, maxWidth: "340px" }}>
               Primes, garanties, délais, urgences. Tout ce que vous devez
@@ -140,7 +140,7 @@ export default function FAQSection() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "64px" }} className="lg:grid-cols-[280px_1fr]">
           <div className="hidden lg:block">
             <div style={{ position: "sticky", top: "100px" }}>
-              <div className="font-mono-label" style={{ color: "rgba(237,236,234,0.28)", marginBottom: "24px" }}>[ Catégories ]</div>
+              <div className="font-mono-label" style={{ color: "rgba(242,232,212,0.28)", marginBottom: "24px" }}>[ Catégories ]</div>
               {faqs.map((cat) => (
                 <a
                   key={cat.category}
@@ -149,7 +149,7 @@ export default function FAQSection() {
                     display:       "block",
                     padding:       "11px 0 11px 18px",
                     borderLeft:    "2px solid rgba(255,255,255,0.07)",
-                    color:         "rgba(237,236,234,0.5)",
+                    color:         "rgba(242,232,212,0.5)",
                     fontFamily:    "var(--font-mono), monospace",
                     fontSize:      "11px", fontWeight: 700,
                     letterSpacing: "0.08em", textTransform: "uppercase",
@@ -157,15 +157,15 @@ export default function FAQSection() {
                     transition:    "all 0.25s cubic-bezier(0.16,1,0.3,1)",
                     marginBottom:  "4px",
                   }}
-                  onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.color = "#EDECEA"; el.style.borderLeftColor = "#E8500A"; }}
-                  onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.color = "rgba(237,236,234,0.5)"; el.style.borderLeftColor = "rgba(255,255,255,0.07)"; }}
+                  onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.color = "#F2E8D4"; el.style.borderLeftColor = "#8C3518"; }}
+                  onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.color = "rgba(242,232,212,0.5)"; el.style.borderLeftColor = "rgba(255,255,255,0.07)"; }}
                 >
                   {cat.category}
                 </a>
               ))}
 
-              <div style={{ marginTop: "48px", padding: "24px", background: "rgba(232,80,10,0.08)", border: "1px solid rgba(232,80,10,0.25)" }}>
-                <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#E8500A", marginBottom: "12px" }}>
+              <div style={{ marginTop: "48px", padding: "24px", background: "rgba(140,53,24,0.08)", border: "1px solid rgba(140,53,24,0.25)" }}>
+                <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#8C3518", marginBottom: "12px" }}>
                   Urgence 24h/24
                 </div>
                 <p style={{ fontSize: "12px", color: "rgba(240,239,233,0.55)", lineHeight: 1.6, marginBottom: "20px" }}>
@@ -189,7 +189,7 @@ export default function FAQSection() {
                 transition={{ duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
-                  <span className="font-mono-label" style={{ color: "#E8500A", whiteSpace: "nowrap" }}>{cat.category}</span>
+                  <span className="font-mono-label" style={{ color: "#8C3518", whiteSpace: "nowrap" }}>{cat.category}</span>
                   <div style={{ flex: 1, height: "1px", background: "rgba(255,255,255,0.06)" }} />
                 </div>
                 {cat.items.map((item) => <FAQItem key={item.q} {...item} />)}

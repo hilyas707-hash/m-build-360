@@ -16,7 +16,7 @@ const services = [
       "Construction de murs porteurs, cloisons, fondations et structures complètes. Briques de parement, parpaings, béton coulé ou banché selon les exigences structurelles et esthétiques du projet.",
     tags: ["Briques", "Parpaings", "Béton armé", "Fondations"],
     highlight: true,
-    image: "/images/maconnerie-neuve.jpg",
+    image: "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Maçonnerie neuve — construction de murs en briques",
   },
   {
@@ -28,7 +28,7 @@ const services = [
       "Diagnostic complet, ravalement de façades, rejointoiement de briques et pierres, réparation de fissures structurelles et non-structurelles. Restauration fidèle des façades anciennes.",
     tags: ["Ravalement", "Rejointoiement", "Fissures", "Pierres"],
     highlight: false,
-    image: "/images/renovation-facade.jpg",
+    image: "https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Rénovation façade — ravalement et rejointoiement",
   },
   {
@@ -40,7 +40,7 @@ const services = [
       "Isolation thermique par l'extérieur (ITE), crépis minéraux et organiques, enduits de finition monocouche ou multicouches. Accès aux primes régionales 2025 pour l'isolation de façade.",
     tags: ["ITE", "Crépis", "Enduits", "Primes"],
     highlight: false,
-    image: "/images/facades-enduits.jpg",
+    image: "https://images.unsplash.com/photo-1564182842519-8a3b2af3e228?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Façades et enduits — isolation thermique extérieure",
   },
   {
@@ -52,7 +52,7 @@ const services = [
       "Pose de carrelage extérieur grès cérame, pavés naturels (porphyre, granit, calcaire), béton désactivé ou imprimé. Terrasses, allées, cours et zones de stationnement.",
     tags: ["Grès cérame", "Porphyre", "Béton désactivé", "Pavés"],
     highlight: false,
-    image: "/images/terrasses-dallage.jpg",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Terrasses et dallage — pavés et carrelage extérieur",
   },
 ];
@@ -81,13 +81,13 @@ export default function ServicesSection() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: "40px", flexWrap: "wrap" }}>
             <h2
               className="font-industrial"
-              style={{ fontSize: "clamp(40px, 6.5vw, 88px)", color: "#EDECEA", maxWidth: "700px" }}
+              style={{ fontSize: "clamp(40px, 6.5vw, 88px)", color: "#F2E8D4", maxWidth: "700px" }}
             >
               Ce que nous
               <br />
-              <span style={{ color: "#E8500A" }}>construisons</span>
+              <span style={{ color: "#8C3518" }}>construisons</span>
             </h2>
-            <p style={{ fontSize: "14px", color: "rgba(237,236,234,0.48)", lineHeight: 1.75, maxWidth: "340px", textWrap: "pretty" as "pretty" }}>
+            <p style={{ fontSize: "14px", color: "rgba(242,232,212,0.48)", lineHeight: 1.75, maxWidth: "340px", textWrap: "pretty" as "pretty" }}>
               Chaque chantier est suivi par notre chef maçon certifié.
               Matériaux sourcés auprès de fournisseurs belges et
               européens labellisés.
@@ -117,7 +117,7 @@ export default function ServicesSection() {
                 textDecoration: "none",
                 color:          "inherit",
                 overflow:       "hidden",
-                border:         s.highlight ? "1px solid rgba(232,80,10,0.22)" : "none",
+                border:         s.highlight ? "1px solid rgba(140,53,24,0.22)" : "none",
               }}
             >
               <Image
@@ -137,7 +137,7 @@ export default function ServicesSection() {
 
               <div aria-hidden="true" style={{
                 position:   "absolute", inset: 0,
-                background: "linear-gradient(to right, rgba(15,15,15,0.04) 0%, rgba(15,15,15,0.38) 38%, rgba(15,15,15,0.88) 62%, rgba(15,15,15,0.98) 80%, #0F0F0F 100%)",
+                background: "linear-gradient(to right, rgba(10,8,5,0.04) 0%, rgba(10,8,5,0.38) 38%, rgba(10,8,5,0.88) 62%, rgba(10,8,5,0.98) 80%, #18130E 100%)",
                 zIndex:     1,
               }} />
               <div aria-hidden="true" style={{
@@ -149,19 +149,19 @@ export default function ServicesSection() {
               {s.highlight && (
                 <div aria-hidden="true" style={{
                   position:   "absolute", top: 0, left: 0, right: 0, height: "2px",
-                  background: "linear-gradient(90deg, transparent 0%, rgba(232,80,10,0.3) 45%, #E8500A 100%)",
+                  background: "linear-gradient(90deg, transparent 0%, rgba(140,53,24,0.3) 45%, #8C3518 100%)",
                   zIndex:     3,
                 }} />
               )}
 
               <div className="service-card-content">
-                <div className="font-mono-label" style={{ color: "#E8500A", marginBottom: "14px" }}>
+                <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "14px" }}>
                   {s.id} — {s.subtitle}
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "16px", gap: "12px" }}>
                   <h3
                     className="font-industrial-md"
-                    style={{ fontSize: "clamp(22px, 2.6vw, 32px)", color: "#EDECEA", lineHeight: 1.1 }}
+                    style={{ fontSize: "clamp(22px, 2.6vw, 32px)", color: "#F2E8D4", lineHeight: 1.1 }}
                   >
                     {s.title}
                   </h3>
@@ -175,11 +175,11 @@ export default function ServicesSection() {
                       flexShrink: 0,
                     }}
                   >
-                    <ArrowUpRight size={15} color="rgba(237,236,234,0.5)" />
+                    <ArrowUpRight size={15} color="rgba(242,232,212,0.5)" />
                   </div>
                 </div>
                 <div style={{ height: "1px", background: "rgba(255,255,255,0.08)", marginBottom: "14px" }} />
-                <p style={{ fontSize: "13px", color: "rgba(237,236,234,0.62)", lineHeight: 1.75, marginBottom: "22px", textWrap: "pretty" as "pretty" }}>
+                <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.62)", lineHeight: 1.75, marginBottom: "22px", textWrap: "pretty" as "pretty" }}>
                   {s.description}
                 </p>
                 <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
@@ -200,17 +200,17 @@ export default function ServicesSection() {
           style={{
             marginTop: "3px",
             padding: "52px 44px",
-            background: "rgba(232,80,10,0.055)",
-            border: "1px solid rgba(232,80,10,0.18)",
+            background: "rgba(140,53,24,0.055)",
+            border: "1px solid rgba(140,53,24,0.18)",
             display: "flex", alignItems: "center",
             justifyContent: "space-between", gap: "32px", flexWrap: "wrap",
           }}
         >
           <div>
-            <div className="font-industrial-md" style={{ fontSize: "clamp(18px, 2.8vw, 30px)", color: "#EDECEA", marginBottom: "8px" }}>
+            <div className="font-industrial-md" style={{ fontSize: "clamp(18px, 2.8vw, 30px)", color: "#F2E8D4", marginBottom: "8px" }}>
               Votre projet ne rentre pas dans une case ?
             </div>
-            <p style={{ fontSize: "13px", color: "rgba(237,236,234,0.48)" }}>
+            <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.48)" }}>
               Nous analysons chaque chantier sur mesure. Contactez-nous pour un diagnostic gratuit.
             </p>
           </div>

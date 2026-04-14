@@ -82,7 +82,7 @@ export default function ConfidentialitePage() {
       <Navbar />
       <main
         style={{
-          background:    "#0F0F0F",
+          background:    "#18130E",
           minHeight:     "100dvh",
           paddingTop:    "120px",
           paddingBottom: "100px",
@@ -97,11 +97,11 @@ export default function ConfidentialitePage() {
             </span>
             <h1
               className="font-industrial"
-              style={{ fontSize: "clamp(32px, 5.5vw, 68px)", color: "#EDECEA" }}
+              style={{ fontSize: "clamp(32px, 5.5vw, 68px)", color: "#F2E8D4" }}
             >
               Politique de
               <br />
-              <span style={{ color: "#E8500A" }}>confidentialité</span>
+              <span style={{ color: "#8C3518" }}>confidentialité</span>
             </h1>
             <div className="tech-divider" style={{ marginTop: "32px" }} />
           </div>
@@ -112,7 +112,7 @@ export default function ConfidentialitePage() {
               <div key={s.title}>
                 <h2
                   className="font-industrial-md"
-                  style={{ fontSize: "16px", color: "#E8500A", marginBottom: "16px" }}
+                  style={{ fontSize: "16px", color: "#8C3518", marginBottom: "16px" }}
                 >
                   {s.title}
                 </h2>
@@ -121,7 +121,7 @@ export default function ConfidentialitePage() {
                     padding:       "20px 24px",
                     background:    "rgba(255,255,255,0.025)",
                     border:        "1px solid rgba(255,255,255,0.065)",
-                    borderLeft:    "3px solid rgba(232,80,10,0.4)",
+                    borderLeft:    "3px solid rgba(140,53,24,0.4)",
                     display:       "flex",
                     flexDirection: "column",
                     gap:           "10px",
@@ -133,7 +133,7 @@ export default function ConfidentialitePage() {
                       key={i}
                       style={{
                         fontSize:   "13px",
-                        color:      "rgba(237,236,234,0.62)",
+                        color:      "rgba(242,232,212,0.62)",
                         lineHeight: 1.72,
                         display:    "flex",
                         gap:        "10px",
@@ -146,7 +146,7 @@ export default function ConfidentialitePage() {
                           width:      "4px",
                           height:     "4px",
                           borderRadius: "50%",
-                          background: "rgba(232,80,10,0.5)",
+                          background: "rgba(140,53,24,0.5)",
                           flexShrink: 0,
                           marginTop:  "7px",
                         }}
@@ -164,7 +164,7 @@ export default function ConfidentialitePage() {
               marginTop:     "56px",
               fontFamily:    "var(--font-mono), monospace",
               fontSize:      "10px",
-              color:         "rgba(237,236,234,0.28)",
+              color:         "rgba(242,232,212,0.28)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
             }}

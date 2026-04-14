@@ -18,10 +18,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ background: "#0E0E0E", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+    <footer style={{ background: "#0F0C08", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div aria-hidden="true" style={{
         height:     "3px",
-        background: "repeating-linear-gradient(90deg,#E8500A 0px,#E8500A 18px,#0E0E0E 18px,#0E0E0E 36px)",
+        background: "repeating-linear-gradient(90deg,#8C3518 0px,#8C3518 12px,#C46030 12px,#C46030 16px,#0F0C08 16px,#0F0C08 34px)",
         opacity:    0.55,
       }} />
 
@@ -30,19 +30,19 @@ export default function Footer() {
 
           <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
             <div style={{
-              width: "28px", height: "28px", background: "#E8500A",
+              width: "28px", height: "28px", background: "#8C3518",
               clipPath: "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }} aria-hidden="true">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 19V10L12 3L20 10V19H15V14H9V19H4Z" fill="#F0EFE9" />
+                <path d="M4 19V10L12 3L20 10V19H15V14H9V19H4Z" fill="#F2E8D4" />
               </svg>
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-display), sans-serif", fontSize: "11px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#F0EFE9", lineHeight: 1 }}>
+              <div style={{ fontFamily: "var(--font-display), sans-serif", fontSize: "11px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#F2E8D4", lineHeight: 1 }}>
                 M Build 360
               </div>
-              <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#E8500A", marginTop: "2px" }}>
+              <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8C3518", marginTop: "2px" }}>
                 Maçonnerie
               </div>
             </div>
@@ -51,11 +51,11 @@ export default function Footer() {
           <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "6px 0" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "20px", paddingRight: "24px", marginRight: "24px", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
               <a href="tel:+3200000000" className="footer-link" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Phone size={10} color="#E8500A" />
+                <Phone size={10} color="#8C3518" />
                 <span>+32 (0)2 000 00 00</span>
               </a>
               <a href="mailto:info@m-build-360.be" className="footer-link" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Mail size={10} color="#E8500A" />
+                <Mail size={10} color="#8C3518" />
                 <span>info@m-build-360.be</span>
               </a>
             </div>
@@ -76,7 +76,7 @@ export default function Footer() {
           <p style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(240,239,233,0.2)", letterSpacing: "0.06em" }}>
             © {year} M Build 360 SRL — TVA BE 0000.000.000
           </p>
-          <p style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(232,80,10,0.22)", letterSpacing: "0.06em" }}>
+          <p style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(140,53,24,0.22)", letterSpacing: "0.06em" }}>
             [ REV 1.0 — BRUXELLES ]
           </p>
         </div>

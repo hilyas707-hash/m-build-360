@@ -63,7 +63,7 @@ export default function ContactSection() {
         position: "relative",
         overflow: "hidden",
         background:
-          "radial-gradient(ellipse at 80% 50%, rgba(232,80,10,0.07) 0%, transparent 60%), #141414",
+          "radial-gradient(ellipse at 80% 50%, rgba(140,53,24,0.08) 0%, transparent 60%), #18130E",
       }}
     >
       {/* Numéro de fond */}
@@ -80,7 +80,7 @@ export default function ContactSection() {
           bottom: 0,
           width: "4px",
           background:
-            "linear-gradient(180deg, transparent 0%, #E8500A 20%, #E8500A 80%, transparent 100%)",
+            "linear-gradient(180deg, transparent 0%, #8C3518 20%, #8C3518 80%, transparent 100%)",
         }}
       />
 
@@ -108,13 +108,13 @@ export default function ContactSection() {
             className="font-industrial"
             style={{
               fontSize: "clamp(36px, 6vw, 80px)",
-              color: "#F0EFE9",
+              color: "#F2E8D4",
               maxWidth: "700px",
             }}
           >
             Parlons de
             <br />
-            <span style={{ color: "#E8500A" }}>votre toiture</span>
+            <span style={{ color: "#8C3518" }}>votre projet</span>
           </h2>
           <div className="tech-divider" style={{ marginTop: "40px" }} />
         </motion.div>
@@ -139,8 +139,8 @@ export default function ContactSection() {
               <div
                 style={{
                   padding: "64px 48px",
-                  background: "rgba(232,80,10,0.06)",
-                  border: "1px solid rgba(232,80,10,0.25)",
+                  background: "rgba(140,53,24,0.06)",
+                  border: "1px solid rgba(140,53,24,0.25)",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -148,11 +148,11 @@ export default function ContactSection() {
                   gap: "24px",
                 }}
               >
-                <CheckCircle size={56} color="#E8500A" />
+                <CheckCircle size={56} color="#8C3518" />
                 <div>
                   <div
                     className="font-industrial-md"
-                    style={{ fontSize: "28px", color: "#F0EFE9", marginBottom: "12px" }}
+                    style={{ fontSize: "28px", color: "#F2E8D4", marginBottom: "12px" }}
                   >
                     Demande envoyée !
                   </div>
@@ -294,25 +294,25 @@ export default function ContactSection() {
                     required
                     style={{ appearance: "none", cursor: "pointer" }}
                   >
-                    <option value="" style={{ background: "#1E1E1E" }}>
+                    <option value="" style={{ background: "#211710" }}>
                       Sélectionnez un service
                     </option>
-                    <option value="pose" style={{ background: "#1E1E1E" }}>
-                      Pose de toiture neuve
+                    <option value="maconnerie-neuve" style={{ background: "#211710" }}>
+                      Maçonnerie neuve
                     </option>
-                    <option value="renovation" style={{ background: "#1E1E1E" }}>
-                      Rénovation / Réfection
+                    <option value="renovation" style={{ background: "#211710" }}>
+                      Rénovation & restauration
                     </option>
-                    <option value="isolation" style={{ background: "#1E1E1E" }}>
-                      Isolation thermique & PEB
+                    <option value="facades" style={{ background: "#211710" }}>
+                      Façades & isolation (ITE)
                     </option>
-                    <option value="zinguerie" style={{ background: "#1E1E1E" }}>
-                      Zinguerie & Gouttières
+                    <option value="terrasses" style={{ background: "#211710" }}>
+                      Terrasses & dallage
                     </option>
-                    <option value="urgence" style={{ background: "#1E1E1E" }}>
-                      Urgence / Fuite
+                    <option value="urgence" style={{ background: "#211710" }}>
+                      Urgence / Fissure structurelle
                     </option>
-                    <option value="autre" style={{ background: "#1E1E1E" }}>
+                    <option value="autre" style={{ background: "#211710" }}>
                       Autre / Diagnostic
                     </option>
                   </select>
@@ -337,7 +337,7 @@ export default function ContactSection() {
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Décrivez brièvement votre toiture, l'état actuel, et vos besoins…"
+                    placeholder="Décrivez brièvement votre chantier, l'état actuel, et vos besoins…"
                     rows={5}
                     style={{ resize: "vertical" }}
                   />
@@ -396,15 +396,15 @@ export default function ContactSection() {
                   style={{
                     width: "44px",
                     height: "44px",
-                    background: "rgba(232,80,10,0.1)",
-                    border: "1px solid rgba(232,80,10,0.25)",
+                    background: "rgba(140,53,24,0.1)",
+                    border: "1px solid rgba(140,53,24,0.25)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0,
                   }}
                 >
-                  <info.icon size={18} color="#E8500A" />
+                  <info.icon size={18} color="#8C3518" />
                 </div>
                 <div>
                   <div
@@ -425,17 +425,17 @@ export default function ContactSection() {
                       style={{
                         fontSize: "15px",
                         fontWeight: 700,
-                        color: "#F0EFE9",
+                        color: "#F2E8D4",
                         textDecoration: "none",
                         display: "block",
                         marginBottom: "4px",
                         transition: "color 0.15s",
                       }}
                       onMouseEnter={(e) =>
-                        ((e.currentTarget as HTMLAnchorElement).style.color = "#E8500A")
+                        ((e.currentTarget as HTMLAnchorElement).style.color = "#8C3518")
                       }
                       onMouseLeave={(e) =>
-                        ((e.currentTarget as HTMLAnchorElement).style.color = "#F0EFE9")
+                        ((e.currentTarget as HTMLAnchorElement).style.color = "#F2E8D4")
                       }
                     >
                       {info.value}
@@ -445,7 +445,7 @@ export default function ContactSection() {
                       style={{
                         fontSize: "15px",
                         fontWeight: 700,
-                        color: "#F0EFE9",
+                        color: "#F2E8D4",
                         marginBottom: "4px",
                       }}
                     >
@@ -469,8 +469,8 @@ export default function ContactSection() {
               style={{
                 marginTop: "16px",
                 padding: "32px 24px",
-                background: "rgba(232,80,10,0.08)",
-                border: "1px solid rgba(232,80,10,0.25)",
+                background: "rgba(140,53,24,0.08)",
+                border: "1px solid rgba(140,53,24,0.25)",
               }}
             >
               <div
@@ -479,7 +479,7 @@ export default function ContactSection() {
                   fontWeight: 700,
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
-                  color: "#E8500A",
+                  color: "#8C3518",
                   marginBottom: "8px",
                 }}
               >
@@ -489,11 +489,11 @@ export default function ContactSection() {
                 className="font-industrial-md"
                 style={{
                   fontSize: "22px",
-                  color: "#F0EFE9",
+                  color: "#F2E8D4",
                   marginBottom: "12px",
                 }}
               >
-                Fuite ? Dégât visible ?
+                Fissure ? Dégât visible ?
               </div>
               <p
                 style={{
@@ -503,8 +503,8 @@ export default function ContactSection() {
                   marginBottom: "24px",
                 }}
               >
-                Notre équipe intervient sous 4 heures. Disponible 7j/7,
-                week-end inclus.
+                Notre équipe intervient rapidement. Diagnostic gratuit sur place,
+                7j/7, week-end inclus.
               </p>
               <a
                 href="tel:+3200000000"
@@ -516,7 +516,7 @@ export default function ContactSection() {
                 }}
               >
                 <Phone size={16} />
-                Appel d'urgence 24h/24
+                Appel direct 24h/24
               </a>
             </div>
           </motion.div>

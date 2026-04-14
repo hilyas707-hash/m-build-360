@@ -56,7 +56,7 @@ function StatItem({
           fontFamily:         "var(--font-mono), monospace",
           fontSize:           "clamp(22px, 3.5vw, 44px)",
           fontWeight:         700,
-          color:              "#E8500A",
+          color:              "#8C3518",
           letterSpacing:      "-0.03em",
           lineHeight:         1.15,
           marginBottom:       "7px",
@@ -70,12 +70,12 @@ function StatItem({
         fontFamily:    "var(--font-display), 'Arial Black', sans-serif",
         fontSize:      "13px", fontWeight: 400,
         textTransform: "uppercase", letterSpacing: "0.04em",
-        color:         "#EDECEA", marginTop: "4px",
+        color:         "#F2E8D4", marginTop: "4px",
       }}>
         {label}
       </div>
 
-      <div className="font-mono-label" style={{ color: "rgba(237,236,234,0.38)", marginTop: "2px" }}>
+      <div className="font-mono-label" style={{ color: "rgba(242,232,212,0.38)", marginTop: "2px" }}>
         {sublabel}
       </div>
     </motion.div>
@@ -100,7 +100,7 @@ export default function StatsSection() {
       id="stats"
       ref={ref}
       style={{
-        background:   "#1A1A1A",
+        background:   "#211710",
         borderTop:    "1px solid rgba(255,255,255,0.06)",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
         position:     "relative",
@@ -111,7 +111,7 @@ export default function StatsSection() {
         position:      "absolute", top: "16px", right: "24px",
         fontFamily:    "var(--font-mono), monospace",
         fontSize:      "9px", fontWeight: 700,
-        color:         "rgba(232,80,10,0.22)",
+        color:         "rgba(140,53,24,0.22)",
         letterSpacing: "0.12em", textTransform: "uppercase",
       }}>
         [ DONNÉES / SYS-02 ]

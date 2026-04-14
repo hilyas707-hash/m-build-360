@@ -7,9 +7,9 @@ import { X, ArrowUpRight } from "lucide-react";
 const WA_NUMBER = "3200000000";
 
 const OPTIONS = [
-  { id: "devis",    label: "Demander un devis",  text: "Bonjour, je souhaite obtenir un devis pour des travaux de toiture." },
-  { id: "urgence",  label: "Signaler une urgence", text: "Bonjour, j'ai une fuite urgente sur ma toiture. Pouvez-vous intervenir ?" },
-  { id: "info",     label: "Poser une question",  text: "Bonjour, j'aurais quelques questions sur vos services." },
+  { id: "devis",    label: "Demander un devis",   text: "Bonjour, je souhaite obtenir un devis pour des travaux de maçonnerie." },
+  { id: "urgence",  label: "Signaler une urgence", text: "Bonjour, j'ai un problème urgent de maçonnerie (fissure, chute de pierres). Pouvez-vous intervenir ?" },
+  { id: "info",     label: "Poser une question",   text: "Bonjour, j'aurais quelques questions sur vos services de maçonnerie." },
 ];
 
 export default function WhatsAppButton() {
@@ -84,7 +84,7 @@ export default function WhatsAppButton() {
                   color:         "#1DB954",
                 }}
               >
-                Toiture Expert — WhatsApp
+                M Build 360 — WhatsApp
               </span>
               <button
                 onClick={() => setOpen(false)}
@@ -98,7 +98,7 @@ export default function WhatsAppButton() {
                   display:        "flex",
                   alignItems:     "center",
                   justifyContent: "center",
-                  color:          "rgba(237,236,234,0.35)",
+                  color:          "rgba(242,232,212,0.35)",
                   touchAction:    "manipulation",
                   padding:        0,
                 }}
@@ -134,7 +134,7 @@ export default function WhatsAppButton() {
                   style={{
                     fontFamily:    "var(--font-display), sans-serif",
                     fontSize:      "12px",
-                    color:         "rgba(237,236,234,0.78)",
+                    color:         "rgba(242,232,212,0.78)",
                     letterSpacing: "0.01em",
                   }}
                 >

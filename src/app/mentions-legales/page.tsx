@@ -60,7 +60,7 @@ export default function MentionsLegalesPage() {
       <Navbar />
       <main
         style={{
-          background:    "#0F0F0F",
+          background:    "#18130E",
           minHeight:     "100dvh",
           paddingTop:    "120px",
           paddingBottom: "100px",
@@ -78,11 +78,11 @@ export default function MentionsLegalesPage() {
             </span>
             <h1
               className="font-industrial"
-              style={{ fontSize: "clamp(36px, 6vw, 72px)", color: "#EDECEA" }}
+              style={{ fontSize: "clamp(36px, 6vw, 72px)", color: "#F2E8D4" }}
             >
               Mentions
               <br />
-              <span style={{ color: "#E8500A" }}>légales</span>
+              <span style={{ color: "#8C3518" }}>légales</span>
             </h1>
             <div className="tech-divider" style={{ marginTop: "32px" }} />
           </div>
@@ -93,7 +93,7 @@ export default function MentionsLegalesPage() {
               <div key={s.title}>
                 <h2
                   className="font-industrial-md"
-                  style={{ fontSize: "18px", color: "#E8500A", marginBottom: "20px" }}
+                  style={{ fontSize: "18px", color: "#8C3518", marginBottom: "20px" }}
                 >
                   {s.title}
                 </h2>
@@ -102,7 +102,7 @@ export default function MentionsLegalesPage() {
                     padding:      "24px 28px",
                     background:   "rgba(255,255,255,0.025)",
                     border:       "1px solid rgba(255,255,255,0.065)",
-                    borderLeft:   "3px solid rgba(232,80,10,0.4)",
+                    borderLeft:   "3px solid rgba(140,53,24,0.4)",
                     display:      "flex",
                     flexDirection: "column",
                     gap:          "10px",
@@ -113,7 +113,7 @@ export default function MentionsLegalesPage() {
                       key={i}
                       style={{
                         fontSize:   "14px",
-                        color:      "rgba(237,236,234,0.62)",
+                        color:      "rgba(242,232,212,0.62)",
                         lineHeight: 1.72,
                         fontFamily: "var(--font-display), sans-serif",
                       }}
@@ -132,7 +132,7 @@ export default function MentionsLegalesPage() {
               marginTop:     "56px",
               fontFamily:    "var(--font-mono), monospace",
               fontSize:      "10px",
-              color:         "rgba(237,236,234,0.28)",
+              color:         "rgba(242,232,212,0.28)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
             }}

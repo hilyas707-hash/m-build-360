@@ -43,7 +43,7 @@ export default function CookiesPage() {
       <Navbar />
       <main
         style={{
-          background:    "#0F0F0F",
+          background:    "#18130E",
           minHeight:     "100dvh",
           paddingTop:    "120px",
           paddingBottom: "100px",
@@ -58,11 +58,11 @@ export default function CookiesPage() {
             </span>
             <h1
               className="font-industrial"
-              style={{ fontSize: "clamp(36px, 6vw, 72px)", color: "#EDECEA" }}
+              style={{ fontSize: "clamp(36px, 6vw, 72px)", color: "#F2E8D4" }}
             >
               Politique
               <br />
-              <span style={{ color: "#E8500A" }}>cookies</span>
+              <span style={{ color: "#8C3518" }}>cookies</span>
             </h1>
             <div className="tech-divider" style={{ marginTop: "32px" }} />
           </div>
@@ -71,13 +71,13 @@ export default function CookiesPage() {
           <p
             style={{
               fontSize:      "14px",
-              color:         "rgba(237,236,234,0.58)",
+              color:         "rgba(242,232,212,0.58)",
               lineHeight:    1.75,
               marginBottom:  "48px",
               padding:       "20px 24px",
-              background:    "rgba(232,80,10,0.05)",
-              border:        "1px solid rgba(232,80,10,0.18)",
-              borderLeft:    "3px solid #E8500A",
+              background:    "rgba(140,53,24,0.05)",
+              border:        "1px solid rgba(140,53,24,0.18)",
+              borderLeft:    "3px solid #8C3518",
               textWrap:      "pretty" as "pretty",
             }}
           >
@@ -103,7 +103,7 @@ export default function CookiesPage() {
                 >
                   <h2
                     className="font-industrial-md"
-                    style={{ fontSize: "15px", color: "#E8500A" }}
+                    style={{ fontSize: "15px", color: "#8C3518" }}
                   >
                     {type.name}
                   </h2>
@@ -115,9 +115,9 @@ export default function CookiesPage() {
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
                       padding:       "3px 8px",
-                      background:    type.required ? "rgba(232,80,10,0.12)" : "rgba(255,255,255,0.05)",
-                      border:        `1px solid ${type.required ? "rgba(232,80,10,0.35)" : "rgba(255,255,255,0.1)"}`,
-                      color:         type.required ? "#E8500A" : "rgba(237,236,234,0.45)",
+                      background:    type.required ? "rgba(140,53,24,0.12)" : "rgba(255,255,255,0.05)",
+                      border:        `1px solid ${type.required ? "rgba(140,53,24,0.35)" : "rgba(255,255,255,0.1)"}`,
+                      color:         type.required ? "#8C3518" : "rgba(242,232,212,0.45)",
                     }}
                   >
                     {type.required ? "Obligatoire" : "Optionnel"}
@@ -128,13 +128,13 @@ export default function CookiesPage() {
                   style={{
                     background:  "rgba(255,255,255,0.025)",
                     border:      "1px solid rgba(255,255,255,0.065)",
-                    borderLeft:  "3px solid rgba(232,80,10,0.4)",
+                    borderLeft:  "3px solid rgba(140,53,24,0.4)",
                   }}
                 >
                   <p
                     style={{
                       fontSize:   "13px",
-                      color:      "rgba(237,236,234,0.58)",
+                      color:      "rgba(242,232,212,0.58)",
                       lineHeight: 1.72,
                       padding:    "20px 24px",
                       borderBottom: "1px solid rgba(255,255,255,0.05)",
@@ -159,7 +159,7 @@ export default function CookiesPage() {
                                 fontWeight:    700,
                                 letterSpacing: "0.12em",
                                 textTransform: "uppercase",
-                                color:         "rgba(232,80,10,0.6)",
+                                color:         "rgba(140,53,24,0.6)",
                                 borderBottom:  "1px solid rgba(255,255,255,0.06)",
                               }}
                             >
@@ -179,7 +179,7 @@ export default function CookiesPage() {
                                 padding:    "12px 20px",
                                 fontFamily: "var(--font-mono), monospace",
                                 fontSize:   "11px",
-                                color:      "#EDECEA",
+                                color:      "#F2E8D4",
                               }}
                             >
                               {ex.name}
@@ -188,7 +188,7 @@ export default function CookiesPage() {
                               style={{
                                 padding:    "12px 20px",
                                 fontSize:   "12px",
-                                color:      "rgba(237,236,234,0.55)",
+                                color:      "rgba(242,232,212,0.55)",
                               }}
                             >
                               {ex.purpose}
@@ -198,7 +198,7 @@ export default function CookiesPage() {
                                 padding:    "12px 20px",
                                 fontFamily: "var(--font-mono), monospace",
                                 fontSize:   "11px",
-                                color:      "rgba(237,236,234,0.45)",
+                                color:      "rgba(242,232,212,0.45)",
                                 whiteSpace: "nowrap",
                               }}
                             >
@@ -218,7 +218,7 @@ export default function CookiesPage() {
           <div>
             <h2
               className="font-industrial-md"
-              style={{ fontSize: "16px", color: "#E8500A", marginBottom: "16px" }}
+              style={{ fontSize: "16px", color: "#8C3518", marginBottom: "16px" }}
             >
               Gérer vos préférences
             </h2>
@@ -227,7 +227,7 @@ export default function CookiesPage() {
                 padding:    "24px",
                 background: "rgba(255,255,255,0.025)",
                 border:     "1px solid rgba(255,255,255,0.065)",
-                borderLeft: "3px solid rgba(232,80,10,0.4)",
+                borderLeft: "3px solid rgba(140,53,24,0.4)",
                 display:    "flex",
                 flexDirection: "column",
                 gap:        "12px",
@@ -245,7 +245,7 @@ export default function CookiesPage() {
                   key={i}
                   style={{
                     fontSize:   "13px",
-                    color:      "rgba(237,236,234,0.58)",
+                    color:      "rgba(242,232,212,0.58)",
                     lineHeight: 1.7,
                   }}
                 >
@@ -260,19 +260,19 @@ export default function CookiesPage() {
             style={{
               marginTop:  "48px",
               padding:    "24px",
-              background: "rgba(232,80,10,0.05)",
-              border:     "1px solid rgba(232,80,10,0.2)",
+              background: "rgba(140,53,24,0.05)",
+              border:     "1px solid rgba(140,53,24,0.2)",
             }}
           >
-            <div className="font-mono-label" style={{ color: "#E8500A", marginBottom: "10px" }}>
+            <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "10px" }}>
               Questions ?
             </div>
-            <p style={{ fontSize: "13px", color: "rgba(237,236,234,0.58)", lineHeight: 1.7 }}>
+            <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.58)", lineHeight: 1.7 }}>
               Pour toute question relative à notre utilisation des cookies ou pour exercer vos droits,
               contactez-nous à{" "}
               <a
                 href="mailto:info@m-build-360.be"
-                style={{ color: "#E8500A", textDecoration: "underline" }}
+                style={{ color: "#8C3518", textDecoration: "underline" }}
               >
                 info@m-build-360.be
               </a>
@@ -284,7 +284,7 @@ export default function CookiesPage() {
               marginTop:     "48px",
               fontFamily:    "var(--font-mono), monospace",
               fontSize:      "10px",
-              color:         "rgba(237,236,234,0.28)",
+              color:         "rgba(242,232,212,0.28)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
             }}
