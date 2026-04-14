@@ -60,7 +60,7 @@ export default function ServiceDetailContent({ service }: Props) {
             position:   "absolute",
             left:       0, top: 0, bottom: 0,
             width:      "3px",
-            background: "linear-gradient(180deg, transparent 0%, #8C3518 20%, #8C3518 80%, transparent 100%)",
+            background: "linear-gradient(180deg, transparent 0%, #C8A020 20%, #C8A020 80%, transparent 100%)",
             zIndex:     2,
           }}
         />
@@ -300,7 +300,7 @@ export default function ServiceDetailContent({ service }: Props) {
                     position:   "absolute",
                     top:        0, left: 0, right: 0,
                     height:     "2px",
-                    background: "linear-gradient(90deg, #8C3518 0%, rgba(140,53,24,0.2) 70%, transparent 100%)",
+                    background: "linear-gradient(90deg, #C8A020 0%, rgba(200,160,32,0.2) 70%, transparent 100%)",
                   }}
                 />
                 <div

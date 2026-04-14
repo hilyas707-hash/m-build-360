@@ -80,7 +80,7 @@ export default function ContactSection() {
           bottom: 0,
           width: "4px",
           background:
-            "linear-gradient(180deg, transparent 0%, #8C3518 20%, #8C3518 80%, transparent 100%)",
+            "linear-gradient(180deg, transparent 0%, #C8A020 20%, #C8A020 80%, transparent 100%)",
         }}
       />
 

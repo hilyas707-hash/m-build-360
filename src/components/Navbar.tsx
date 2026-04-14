@@ -50,7 +50,7 @@ export default function Navbar() {
         backdropFilter:       scrolled ? "blur(20px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
       }}>
-        <div aria-hidden="true" style={{ height: "2px", background: "linear-gradient(90deg, #8C3518 0%, rgba(140,53,24,0.4) 60%, transparent 100%)" }} />
+        <div aria-hidden="true" style={{ height: "2px", background: "linear-gradient(90deg, #C8A020 0%, rgba(200,160,32,0.4) 60%, transparent 100%)" }} />
 
         <nav role="navigation" aria-label="Navigation principale" style={{
           maxWidth: "1160px", margin: "0 auto", padding: "0 24px",
@@ -310,7 +310,7 @@ export default function Navbar() {
               overflowY:  "auto",
             }}
           >
-            <div aria-hidden="true" style={{ height: "2px", background: "#8C3518", flexShrink: 0 }} />
+            <div aria-hidden="true" style={{ height: "2px", background: "#C8A020", flexShrink: 0 }} />
 
             {/* Header panel */}
             <div style={{

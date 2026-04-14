@@ -9,34 +9,34 @@ const articles = [
   {
     id:       "01",
     category: "Primes & subventions",
-    date:     "08 AVRIL 2025",
+    date:     "02 AVRIL 2025",
     readTime: "4 MIN",
     tag:      "NOUVEAU",
-    title:    "Primes isolation toiture 2025 : jusqu'à 7 200 € selon votre région",
+    title:    "Primes maçonnerie 2025 : jusqu'à 60 €/m² pour l'ITE de façade en Belgique",
     excerpt:
-      "La Wallonie, Bruxelles-Capitale et la Flandre ont révisé leurs barèmes pour 2025. Les ménages à revenus modestes peuvent désormais cumuler primes régionales et avantage fiscal fédéral, réduisant le coût réel de l'isolation de toiture de 50 à 70 %. Les demandes restent obligatoirement soumises après l'achèvement des travaux et nécessitent une facture d'un entrepreneur enregistré.",
+      "Wallonie, Bruxelles-Capitale et Flandre ont révisé leurs barèmes pour 2025. Les travaux de maçonnerie couvrant l'isolation thermique par l'extérieur (ITE) peuvent bénéficier de primes cumulables allant jusqu'à 60 €/m² selon la région et les revenus du ménage. Conditions : dossier déposé avant le début des travaux, entrepreneur enregistré Constructiv, système certifié ATG. M Build 360 constitue votre dossier complet.",
     featured: true,
   },
   {
     id:       "02",
-    category: "Réglementation PEB",
-    date:     "22 MARS 2025",
+    category: "Normes NBN",
+    date:     "18 MARS 2025",
     readTime: "3 MIN",
     tag:      null,
-    title:    "Obligation PEB 2026 : la toiture en tête des travaux prioritaires",
+    title:    "Eurocode 6 (NBN EN 1996) : nouvelles exigences pour les maçonneries portantes en 2025",
     excerpt:
-      "Dès le 1ᵉʳ janvier 2026, toute rénovation lourde en Wallonie devra atteindre un niveau de performance énergétique minimum. L'isolation de toiture figure parmi les mesures prioritaires identifiées par l'administration wallonne.",
+      "La mise à jour de l'Eurocode 6 renforce les critères de calcul des ouvrages en maçonnerie. Les murs porteurs en briques ou parpaings doivent désormais être dimensionnés selon des règles de charge révisées. Tout entrepreneur belge certifié Constructiv est tenu d'appliquer ces normes dès le 1er trimestre 2025.",
     featured: false,
   },
   {
     id:       "03",
-    category: "Innovation technique",
-    date:     "14 FÉVRIER 2025",
+    category: "Réglementation PEB",
+    date:     "05 FÉVRIER 2025",
     readTime: "2 MIN",
     tag:      null,
-    title:    "Sarking : isolation extérieure sans perte d'espace habitable",
+    title:    "PEB 2026 : les façades en maçonnerie non isolées dans le collimateur wallon",
     excerpt:
-      "La technique sarking (isolation par l'extérieur) permet d'atteindre R ≥ 6 m²K/W sans démolition intérieure ni réduction du volume habitable. Elle est éligible aux primes dans les trois régions belges.",
+      "Dès janvier 2026, toute rénovation lourde en Wallonie devra atteindre un niveau PEB minimum. Les façades en briques non isolées figurent parmi les travaux prioritaires. L'ITE sur maçonnerie existante est la solution la plus efficace pour atteindre R ≥ 4,5 m²K/W sans réduire la surface habitable.",
     featured: false,
   },
 ];
@@ -80,9 +80,9 @@ export default function ActualitesSection() {
               className="font-industrial"
               style={{ fontSize: "clamp(38px, 6vw, 84px)", color: "#F2E8D4", maxWidth: "600px" }}
             >
-              Nouvelles
+              Normes &
               <br />
-              <span style={{ color: "#8C3518" }}>réglementaires</span>
+              <span style={{ color: "#8C3518" }}>réglementation</span>
             </h2>
             <p
               style={{
@@ -93,8 +93,9 @@ export default function ActualitesSection() {
                 textWrap:  "pretty" as "pretty",
               }}
             >
-              Primes, certifications et normes PEB en Belgique. Mise à jour
-              par notre équipe technique chaque mois.
+              Primes, normes NBN, Eurocodes et réglementation PEB
+              pour les travaux de maçonnerie en Belgique.
+              Mise à jour mensuelle par notre équipe.
             </p>
           </div>
           <div className="tech-divider" style={{ marginTop: "44px" }} />
@@ -207,7 +208,7 @@ export default function ActualitesSection() {
                   onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.gap = "14px"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.gap = "8px"; }}
                 >
-                  Demander les primes
+                  Vérifier mes primes maçonnerie
                   <ArrowUpRight size={14} aria-hidden="true" />
                 </a>
                 <span
@@ -336,7 +337,7 @@ export default function ActualitesSection() {
               className="font-industrial-md"
               style={{ fontSize: "clamp(16px, 2.4vw, 26px)", color: "#F2E8D4", marginBottom: "6px" }}
             >
-              Vérifiez vos droits aux primes 2025
+              Vérifiez vos droits aux primes maçonnerie 2025
             </div>
             <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.45)" }}>
               Analyse gratuite de votre éligibilité selon votre commune et vos revenus.

@@ -101,7 +101,7 @@ export default function HeroSection() {
 
       <div aria-hidden="true" style={{
         position: "absolute", left: 0, top: 0, bottom: 0, width: "3px",
-        background: "linear-gradient(180deg, transparent 0%, #8C3518 18%, #8C3518 82%, transparent 100%)",
+        background: "linear-gradient(180deg, transparent 0%, #C8A020 18%, #C8A020 82%, transparent 100%)",
         zIndex: 5,
       }} />
 

@@ -21,7 +21,7 @@ export default function Footer() {
     <footer style={{ background: "#0F0C08", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div aria-hidden="true" style={{
         height:     "3px",
-        background: "repeating-linear-gradient(90deg,#8C3518 0px,#8C3518 12px,#C46030 12px,#C46030 16px,#0F0C08 16px,#0F0C08 34px)",
+        background: "repeating-linear-gradient(90deg,#C8A020 0px,#C8A020 12px,#2C2C2C 12px,#2C2C2C 16px,#0F0C08 16px,#0F0C08 34px)",
         opacity:    0.55,
       }} />
 
