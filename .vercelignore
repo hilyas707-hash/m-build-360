@@ -1,5 +1,3 @@
 node_modules
 .next
 .claude
-public/video/*.mov
-public/video/*.mp4

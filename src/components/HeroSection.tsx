@@ -79,12 +79,11 @@ export default function HeroSection() {
       <video
         ref={videoRef}
         autoPlay muted loop playsInline preload="metadata"
-        poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
         aria-hidden="true"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", zIndex: 0 }}
       >
-        <source src="/video/hero-bg.mp4"  type="video/mp4" />
-        <source src="/video/hero-bg.webm" type="video/webm" />
+        <source src="/video/Hero-bg.mov" type="video/quicktime" />
+        <source src="/video/Hero-bg.mov" type="video/mp4" />
       </video>
 
       <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(15,15,15,0.74)", zIndex: 1 }} />

@@ -17,10 +17,10 @@ const nextConfig: NextConfig = {
     imageSizes: [64, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 an en secondes
     remotePatterns: [
-      // Picsum Photos — images de substitution (hero vidéo fallback)
-      new URL("https://picsum.photos/**"),
+      // Picsum Photos
+      { protocol: "https", hostname: "picsum.photos" },
       // Unsplash — photos de maçonnerie haute résolution
-      new URL("https://images.unsplash.com/**"),
+      { protocol: "https", hostname: "images.unsplash.com" },
     ],
   },
 
