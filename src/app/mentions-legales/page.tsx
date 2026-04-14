@@ -82,7 +82,7 @@ export default function MentionsLegalesPage() {
             >
               Mentions
               <br />
-              <span style={{ color: "#8C3518" }}>légales</span>
+              <span style={{ color: "#C8A020" }}>légales</span>
             </h1>
             <div className="tech-divider" style={{ marginTop: "32px" }} />
           </div>
@@ -93,7 +93,7 @@ export default function MentionsLegalesPage() {
               <div key={s.title}>
                 <h2
                   className="font-industrial-md"
-                  style={{ fontSize: "18px", color: "#8C3518", marginBottom: "20px" }}
+                  style={{ fontSize: "18px", color: "#C8A020", marginBottom: "20px" }}
                 >
                   {s.title}
                 </h2>
@@ -102,7 +102,7 @@ export default function MentionsLegalesPage() {
                     padding:      "24px 28px",
                     background:   "rgba(255,255,255,0.025)",
                     border:       "1px solid rgba(255,255,255,0.065)",
-                    borderLeft:   "3px solid rgba(140,53,24,0.4)",
+                    borderLeft:   "3px solid rgba(200,160,32,0.4)",
                     display:      "flex",
                     flexDirection: "column",
                     gap:          "10px",

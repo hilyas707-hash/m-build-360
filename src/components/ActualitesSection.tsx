@@ -82,7 +82,7 @@ export default function ActualitesSection() {
             >
               Normes &
               <br />
-              <span style={{ color: "#8C3518" }}>réglementation</span>
+              <span style={{ color: "#C8A020" }}>réglementation</span>
             </h2>
             <p
               style={{
@@ -136,7 +136,7 @@ export default function ActualitesSection() {
                   position:   "absolute",
                   top:        0, left: 0, right: 0,
                   height:     "2px",
-                  background: "linear-gradient(90deg, var(--orange) 0%, rgba(140,53,24,0.4) 100%)",
+                  background: "linear-gradient(90deg, var(--orange) 0%, rgba(200,160,32,0.4) 100%)",
                 }}
               />
 
@@ -151,7 +151,7 @@ export default function ActualitesSection() {
               {/* Date + durée */}
               <div
                 className="font-mono-label"
-                style={{ color: "rgba(140,53,24,0.6)", marginBottom: "18px", display: "flex", gap: "16px" }}
+                style={{ color: "rgba(200,160,32,0.6)", marginBottom: "18px", display: "flex", gap: "16px" }}
               >
                 <span>{a.date}</span>
                 <span style={{ color: "rgba(242,232,212,0.2)" }}>—</span>
@@ -197,7 +197,7 @@ export default function ActualitesSection() {
                     fontSize:      "11px",
                     fontWeight:    700,
                     letterSpacing: "0.1em",
-                    color:         "#8C3518",
+                    color:         "#C8A020",
                     textDecoration: "none",
                     textTransform: "uppercase",
                     display:       "flex",
@@ -263,7 +263,7 @@ export default function ActualitesSection() {
 
                 <div
                   className="font-mono-label"
-                  style={{ color: "rgba(140,53,24,0.5)", marginBottom: "14px" }}
+                  style={{ color: "rgba(200,160,32,0.5)", marginBottom: "14px" }}
                 >
                   {a.date}
                 </div>
@@ -303,7 +303,7 @@ export default function ActualitesSection() {
                     fontFamily:    "var(--font-mono), monospace",
                     fontSize:      "9px",
                     fontWeight:    700,
-                    color:         "rgba(140,53,24,0.2)",
+                    color:         "rgba(200,160,32,0.2)",
                     letterSpacing: "0.1em",
                   }}
                 >
@@ -323,8 +323,8 @@ export default function ActualitesSection() {
           style={{
             marginTop:      "3px",
             padding:        "40px 44px",
-            background:     "rgba(140,53,24,0.055)",
-            border:         "1px solid rgba(140,53,24,0.18)",
+            background:     "rgba(200,160,32,0.055)",
+            border:         "1px solid rgba(200,160,32,0.18)",
             display:        "flex",
             alignItems:     "center",
             justifyContent: "space-between",

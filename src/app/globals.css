@@ -14,7 +14,7 @@
   --zinc-border:  rgba(215, 190, 158, 0.08);
 
   /* ── Brique flamande — accent primaire ── */
-  --orange:        #8C3518;  /* brique belge profonde */
+  --orange:        #C8A020;  /* brique belge profonde */
   --orange-hover:  #A84826;
   --orange-dim:    rgba(140, 53, 24, 0.10);
   --orange-border: rgba(140, 53, 24, 0.32);
@@ -30,7 +30,7 @@
   --sable:         #C4A878;  /* sable / pierre dorée */
 
   /* ── Sémantique (noms maintenus pour compatibilité) ── */
-  --brick:         #8C3518;
+  --brick:         #C8A020;
   --concrete:      #211710;
   --anthracite:    #0E0A07;
 

@@ -56,7 +56,7 @@ function StatItem({
           fontFamily:         "var(--font-mono), monospace",
           fontSize:           "clamp(22px, 3.5vw, 44px)",
           fontWeight:         700,
-          color:              "#8C3518",
+          color:              "#C8A020",
           letterSpacing:      "-0.03em",
           lineHeight:         1.15,
           marginBottom:       "7px",
@@ -111,7 +111,7 @@ export default function StatsSection() {
         position:      "absolute", top: "16px", right: "24px",
         fontFamily:    "var(--font-mono), monospace",
         fontSize:      "9px", fontWeight: 700,
-        color:         "rgba(140,53,24,0.22)",
+        color:         "rgba(200,160,32,0.22)",
         letterSpacing: "0.12em", textTransform: "uppercase",
       }}>
         [ DONNÉES / SYS-02 ]

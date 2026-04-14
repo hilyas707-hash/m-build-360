@@ -87,7 +87,7 @@ export default function ServiceDetailContent({ service }: Props) {
             <span>›</span>
             <a href="/services" style={{ color: "inherit", textDecoration: "none" }}>Services</a>
             <span>›</span>
-            <span style={{ color: "rgba(140,53,24,0.8)" }}>{service.title}</span>
+            <span style={{ color: "rgba(200,160,32,0.8)" }}>{service.title}</span>
           </motion.div>
 
           <motion.div
@@ -100,7 +100,7 @@ export default function ServiceDetailContent({ service }: Props) {
                 aria-hidden="true"
                 style={{
                   width: "5px", height: "5px", borderRadius: "50%",
-                  background: "#8C3518",
+                  background: "#C8A020",
                   animation: "pulse-orange 2s cubic-bezier(0.65,0,0.35,1) infinite",
                   flexShrink: 0,
                 }}
@@ -118,7 +118,7 @@ export default function ServiceDetailContent({ service }: Props) {
           >
             {service.title.split(" ").slice(0, -2).join(" ")}
             <br />
-            <span style={{ color: "#8C3518" }}>
+            <span style={{ color: "#C8A020" }}>
               {service.title.split(" ").slice(-2).join(" ")}
             </span>
           </motion.h1>
@@ -172,12 +172,12 @@ export default function ServiceDetailContent({ service }: Props) {
                 style={{
                   marginTop:  "40px",
                   padding:    "24px 28px",
-                  background: "rgba(140,53,24,0.06)",
-                  border:     "1px solid rgba(140,53,24,0.2)",
-                  borderLeft: "3px solid #8C3518",
+                  background: "rgba(200,160,32,0.06)",
+                  border:     "1px solid rgba(200,160,32,0.2)",
+                  borderLeft: "3px solid #C8A020",
                 }}
               >
-                <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "12px" }}>
+                <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "12px" }}>
                   [ Note technique ]
                 </div>
                 <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.62)", lineHeight: 1.75 }}>
@@ -205,7 +205,7 @@ export default function ServiceDetailContent({ service }: Props) {
                   >
                     <CheckSquare
                       size={13}
-                      color="#8C3518"
+                      color="#C8A020"
                       style={{ flexShrink: 0, marginTop: "3px" }}
                       aria-hidden="true"
                     />
@@ -266,7 +266,7 @@ export default function ServiceDetailContent({ service }: Props) {
             >
               Normes &
               <br />
-              <span style={{ color: "#8C3518" }}>réglementations belges</span>
+              <span style={{ color: "#C8A020" }}>réglementations belges</span>
             </h2>
             <div className="tech-divider" style={{ marginTop: "32px", maxWidth: "400px" }} />
           </motion.div>
@@ -305,7 +305,7 @@ export default function ServiceDetailContent({ service }: Props) {
                 />
                 <div
                   className="font-mono-label"
-                  style={{ color: "#8C3518", marginBottom: "12px" }}
+                  style={{ color: "#C8A020", marginBottom: "12px" }}
                 >
                   {norm.code}
                 </div>
@@ -351,7 +351,7 @@ export default function ServiceDetailContent({ service }: Props) {
                   onMouseEnter={(e) => {
                     const el = e.currentTarget as HTMLAnchorElement;
                     el.style.color       = "#F2E8D4";
-                    el.style.borderColor = "rgba(140,53,24,0.35)";
+                    el.style.borderColor = "rgba(200,160,32,0.35)";
                   }}
                   onMouseLeave={(e) => {
                     const el = e.currentTarget as HTMLAnchorElement;
@@ -394,7 +394,7 @@ export default function ServiceDetailContent({ service }: Props) {
             >
               Primes
               <br />
-              <span style={{ color: "#8C3518" }}>par région</span>
+              <span style={{ color: "#C8A020" }}>par région</span>
             </h2>
             <div className="tech-divider" style={{ marginTop: "32px", maxWidth: "360px" }} />
           </motion.div>
@@ -425,7 +425,7 @@ export default function ServiceDetailContent({ service }: Props) {
                 }}
               >
                 {/* Indicateur région */}
-                <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "16px" }}>
+                <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "16px" }}>
                   {prime.region}
                 </div>
 
@@ -458,13 +458,13 @@ export default function ServiceDetailContent({ service }: Props) {
                     fontSize:       "9px",
                     letterSpacing:  "0.12em",
                     textTransform:  "uppercase",
-                    color:          "rgba(140,53,24,0.6)",
+                    color:          "rgba(200,160,32,0.6)",
                     textDecoration: "none",
                     transition:     "color 0.2s",
                     alignSelf:      "flex-start",
                   }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#8C3518"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(140,53,24,0.6)"; }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#C8A020"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(200,160,32,0.6)"; }}
                 >
                   <ExternalLink size={9} aria-hidden="true" />
                   Site officiel {prime.region}
@@ -614,7 +614,7 @@ export default function ServiceDetailContent({ service }: Props) {
             >
               Devis gratuit
               <br />
-              <span style={{ color: "#8C3518" }}>sous 48 heures</span>
+              <span style={{ color: "#C8A020" }}>sous 48 heures</span>
             </h2>
             <p
               style={{

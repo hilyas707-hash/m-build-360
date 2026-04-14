@@ -63,7 +63,7 @@ export default function ContactSection() {
         position: "relative",
         overflow: "hidden",
         background:
-          "radial-gradient(ellipse at 80% 50%, rgba(140,53,24,0.08) 0%, transparent 60%), #18130E",
+          "radial-gradient(ellipse at 80% 50%, rgba(200,160,32,0.08) 0%, transparent 60%), #18130E",
       }}
     >
       {/* Numéro de fond */}
@@ -114,7 +114,7 @@ export default function ContactSection() {
           >
             Parlons de
             <br />
-            <span style={{ color: "#8C3518" }}>votre projet</span>
+            <span style={{ color: "#C8A020" }}>votre projet</span>
           </h2>
           <div className="tech-divider" style={{ marginTop: "40px" }} />
         </motion.div>
@@ -139,8 +139,8 @@ export default function ContactSection() {
               <div
                 style={{
                   padding: "64px 48px",
-                  background: "rgba(140,53,24,0.06)",
-                  border: "1px solid rgba(140,53,24,0.25)",
+                  background: "rgba(200,160,32,0.06)",
+                  border: "1px solid rgba(200,160,32,0.25)",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -148,7 +148,7 @@ export default function ContactSection() {
                   gap: "24px",
                 }}
               >
-                <CheckCircle size={56} color="#8C3518" />
+                <CheckCircle size={56} color="#C8A020" />
                 <div>
                   <div
                     className="font-industrial-md"
@@ -396,15 +396,15 @@ export default function ContactSection() {
                   style={{
                     width: "44px",
                     height: "44px",
-                    background: "rgba(140,53,24,0.1)",
-                    border: "1px solid rgba(140,53,24,0.25)",
+                    background: "rgba(200,160,32,0.1)",
+                    border: "1px solid rgba(200,160,32,0.25)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0,
                   }}
                 >
-                  <info.icon size={18} color="#8C3518" />
+                  <info.icon size={18} color="#C8A020" />
                 </div>
                 <div>
                   <div
@@ -432,7 +432,7 @@ export default function ContactSection() {
                         transition: "color 0.15s",
                       }}
                       onMouseEnter={(e) =>
-                        ((e.currentTarget as HTMLAnchorElement).style.color = "#8C3518")
+                        ((e.currentTarget as HTMLAnchorElement).style.color = "#C8A020")
                       }
                       onMouseLeave={(e) =>
                         ((e.currentTarget as HTMLAnchorElement).style.color = "#F2E8D4")
@@ -469,8 +469,8 @@ export default function ContactSection() {
               style={{
                 marginTop: "16px",
                 padding: "32px 24px",
-                background: "rgba(140,53,24,0.08)",
-                border: "1px solid rgba(140,53,24,0.25)",
+                background: "rgba(200,160,32,0.08)",
+                border: "1px solid rgba(200,160,32,0.25)",
               }}
             >
               <div
@@ -479,7 +479,7 @@ export default function ContactSection() {
                   fontWeight: 700,
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
-                  color: "#8C3518",
+                  color: "#C8A020",
                   marginBottom: "8px",
                 }}
               >

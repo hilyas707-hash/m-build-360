@@ -45,7 +45,7 @@ export default function HeroSection() {
       for (const p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(140,53,24,${p.opacity})`;
+        ctx.fillStyle = `rgba(200,160,32,${p.opacity})`;
         ctx.fill();
         p.x += p.vx;
         p.y += p.vy;
@@ -79,18 +79,18 @@ export default function HeroSection() {
       <video
         ref={videoRef}
         autoPlay muted loop playsInline preload="metadata"
+        poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
         aria-hidden="true"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", zIndex: 0 }}
       >
-        <source src="/video/Hero-bg.mov" type="video/quicktime" />
-        <source src="/video/Hero-bg.mov" type="video/mp4" />
+        <source src="/video/Hero-bg.mp4" type="video/mp4" />
       </video>
 
       <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(15,15,15,0.74)", zIndex: 1 }} />
       <div aria-hidden="true" style={{
         position: "absolute", inset: 0, zIndex: 2,
         background: [
-          "radial-gradient(ellipse at 15% 55%, rgba(140,53,24,0.11) 0%, transparent 52%)",
+          "radial-gradient(ellipse at 15% 55%, rgba(200,160,32,0.11) 0%, transparent 52%)",
           "radial-gradient(ellipse at 82% 8%,  rgba(15,15,15,0.55) 0%, transparent 52%)",
           "radial-gradient(ellipse at 50% 100%, rgba(15,15,15,0.45) 0%, transparent 55%)",
         ].join(", "),
@@ -115,7 +115,7 @@ export default function HeroSection() {
         >
           Bâtir solide,
           <br />
-          <span style={{ color: "#8C3518" }}>construire juste,</span>
+          <span style={{ color: "#C8A020" }}>construire juste,</span>
           <br />
           livrer complet.
         </motion.h1>

@@ -60,7 +60,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", flexShrink: 0 }}>
             <div style={{
-              width: "32px", height: "32px", background: "#8C3518",
+              width: "32px", height: "32px", background: "#C8A020",
               clipPath: "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }} aria-hidden="true">
@@ -80,7 +80,7 @@ export default function Navbar() {
               <div style={{
                 fontFamily: "var(--font-mono), monospace",
                 fontSize: "8px", letterSpacing: "0.2em",
-                textTransform: "uppercase", color: "#8C3518", marginTop: "2px",
+                textTransform: "uppercase", color: "#C8A020", marginTop: "2px",
               }}>
                 Maçonnerie
               </div>
@@ -100,13 +100,13 @@ export default function Navbar() {
                 style={{
                   display:       "flex", alignItems: "center", gap: "5px",
                   padding:       "8px 14px",
-                  background:    servicesActive ? "rgba(140,53,24,0.1)" : "transparent",
-                  border:        `1px solid ${servicesActive ? "rgba(140,53,24,0.3)" : "transparent"}`,
+                  background:    servicesActive ? "rgba(200,160,32,0.1)" : "transparent",
+                  border:        `1px solid ${servicesActive ? "rgba(200,160,32,0.3)" : "transparent"}`,
                   cursor:        "pointer",
                   fontFamily:    "var(--font-mono), monospace",
                   fontSize:      "10px", fontWeight: 700,
                   letterSpacing: "0.1em", textTransform: "uppercase",
-                  color:         servicesActive ? "#8C3518" : "rgba(242,232,212,0.65)",
+                  color:         servicesActive ? "#C8A020" : "rgba(242,232,212,0.65)",
                   transition:    "all 0.18s",
                   touchAction:   "manipulation",
                 }}
@@ -131,7 +131,7 @@ export default function Navbar() {
                       width:      "310px",
                       background: "#0F0B08",
                       border:     "1px solid rgba(255,255,255,0.08)",
-                      borderTop:  "2px solid #8C3518",
+                      borderTop:  "2px solid #C8A020",
                       zIndex:     300,
                     }}
                   >
@@ -145,16 +145,16 @@ export default function Navbar() {
                           padding:        "14px 18px",
                           textDecoration: "none",
                           borderBottom:   i < serviceLinks.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none",
-                          borderLeft:     pathname === `/services/${s.slug}` ? "2px solid #8C3518" : "2px solid transparent",
+                          borderLeft:     pathname === `/services/${s.slug}` ? "2px solid #C8A020" : "2px solid transparent",
                           transition:     "background 0.15s",
                         }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(140,53,24,0.07)"; }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(200,160,32,0.07)"; }}
                         onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}
                       >
                         <span style={{
                           fontFamily:    "var(--font-mono), monospace",
                           fontSize:      "9px", fontWeight: 700,
-                          color:         "#8C3518", letterSpacing: "0.1em",
+                          color:         "#C8A020", letterSpacing: "0.1em",
                           flexShrink:    0,
                         }}>
                           {s.id}
@@ -212,7 +212,7 @@ export default function Navbar() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#F2E8D4"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "rgba(242,232,212,0.6)"; }}
             >
-              <Phone size={12} color="#8C3518" aria-hidden="true" />
+              <Phone size={12} color="#C8A020" aria-hidden="true" />
               +32 (0)2 000 00 00
             </a>
             <a href="#contact" className="btn-primary" style={{ fontSize: "11px", padding: "9px 18px" }}>
@@ -236,12 +236,12 @@ export default function Navbar() {
               style={{
                 width:          "44px", height: "44px",
                 display:        "flex", alignItems: "center", justifyContent: "center",
-                background:     "rgba(140,53,24,0.1)",
-                border:         "1px solid rgba(140,53,24,0.25)",
+                background:     "rgba(200,160,32,0.1)",
+                border:         "1px solid rgba(200,160,32,0.25)",
                 touchAction:    "manipulation",
               }}
             >
-              <Phone size={16} color="#8C3518" aria-hidden="true" />
+              <Phone size={16} color="#C8A020" aria-hidden="true" />
             </a>
             <button
               onClick={() => setOpen(true)}
@@ -259,7 +259,7 @@ export default function Navbar() {
               }}
             >
               <span style={{ width: "18px", height: "1.5px", background: "#F2E8D4", display: "block" }} aria-hidden="true" />
-              <span style={{ width: "12px", height: "1.5px", background: "#8C3518",  display: "block" }} aria-hidden="true" />
+              <span style={{ width: "12px", height: "1.5px", background: "#C8A020",  display: "block" }} aria-hidden="true" />
               <span style={{ width: "18px", height: "1.5px", background: "#F2E8D4", display: "block" }} aria-hidden="true" />
             </button>
           </div>
@@ -354,17 +354,17 @@ export default function Navbar() {
                     display:        "flex", alignItems: "center", gap: "16px",
                     minHeight:      "64px", padding: "0 20px",
                     textDecoration: "none",
-                    borderLeft:     pathname === `/services/${s.slug}` ? "3px solid #8C3518" : "3px solid transparent",
+                    borderLeft:     pathname === `/services/${s.slug}` ? "3px solid #C8A020" : "3px solid transparent",
                     borderBottom:   "1px solid rgba(255,255,255,0.04)",
                     transition:     "background 0.15s",
                   }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(140,53,24,0.06)"; }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(200,160,32,0.06)"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}
                 >
                   <span style={{
                     fontFamily:    "var(--font-mono), monospace",
                     fontSize:      "10px", fontWeight: 700,
-                    color:         "#8C3518", flexShrink: 0,
+                    color:         "#C8A020", flexShrink: 0,
                   }}>
                     {s.id}
                   </span>

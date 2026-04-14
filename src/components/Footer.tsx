@@ -30,7 +30,7 @@ export default function Footer() {
 
           <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
             <div style={{
-              width: "28px", height: "28px", background: "#8C3518",
+              width: "28px", height: "28px", background: "#C8A020",
               clipPath: "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }} aria-hidden="true">
@@ -42,7 +42,7 @@ export default function Footer() {
               <div style={{ fontFamily: "var(--font-display), sans-serif", fontSize: "11px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#F2E8D4", lineHeight: 1 }}>
                 M Build 360
               </div>
-              <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8C3518", marginTop: "2px" }}>
+              <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#C8A020", marginTop: "2px" }}>
                 Maçonnerie
               </div>
             </div>
@@ -51,11 +51,11 @@ export default function Footer() {
           <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "6px 0" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "20px", paddingRight: "24px", marginRight: "24px", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
               <a href="tel:+3200000000" className="footer-link" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Phone size={10} color="#8C3518" />
+                <Phone size={10} color="#C8A020" />
                 <span>+32 (0)2 000 00 00</span>
               </a>
               <a href="mailto:info@m-build-360.be" className="footer-link" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Mail size={10} color="#8C3518" />
+                <Mail size={10} color="#C8A020" />
                 <span>info@m-build-360.be</span>
               </a>
             </div>
@@ -76,7 +76,7 @@ export default function Footer() {
           <p style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(240,239,233,0.2)", letterSpacing: "0.06em" }}>
             © {year} M Build 360 SRL — TVA BE 0000.000.000
           </p>
-          <p style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(140,53,24,0.22)", letterSpacing: "0.06em" }}>
+          <p style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(200,160,32,0.22)", letterSpacing: "0.06em" }}>
             [ REV 1.0 — BRUXELLES ]
           </p>
         </div>

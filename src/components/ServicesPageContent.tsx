@@ -131,7 +131,7 @@ export default function ServicesPageContent() {
           aria-hidden="true"
           style={{
             position: "absolute", left: 0, top: 0, bottom: 0, width: "3px",
-            background: "linear-gradient(180deg, transparent 0%, #8C3518 20%, #8C3518 80%, transparent 100%)",
+            background: "linear-gradient(180deg, transparent 0%, #C8A020 20%, #C8A020 80%, transparent 100%)",
           }}
         />
 
@@ -146,7 +146,7 @@ export default function ServicesPageContent() {
             fontSize:      "9px",
             fontWeight:    700,
             letterSpacing: "0.14em",
-            color:         "rgba(140,53,24,0.3)",
+            color:         "rgba(200,160,32,0.3)",
             textTransform: "uppercase",
             lineHeight:    1.8,
           }}
@@ -164,7 +164,7 @@ export default function ServicesPageContent() {
           >
             <a href="/" style={{ color: "inherit", textDecoration: "none" }}>Accueil</a>
             <span>›</span>
-            <span style={{ color: "rgba(140,53,24,0.7)" }}>Services</span>
+            <span style={{ color: "rgba(200,160,32,0.7)" }}>Services</span>
           </div>
 
           <motion.div
@@ -177,7 +177,7 @@ export default function ServicesPageContent() {
                 aria-hidden="true"
                 style={{
                   width: "5px", height: "5px", borderRadius: "50%",
-                  background: "#8C3518",
+                  background: "#C8A020",
                   animation: "pulse-orange 2s cubic-bezier(0.65,0,0.35,1) infinite",
                   flexShrink: 0,
                 }}
@@ -195,7 +195,7 @@ export default function ServicesPageContent() {
           >
             Nos prestations
             <br />
-            <span style={{ color: "#8C3518" }}>en toiture</span>
+            <span style={{ color: "#C8A020" }}>en toiture</span>
           </motion.h1>
 
           <motion.div
@@ -315,7 +315,7 @@ export default function ServicesPageContent() {
                   }}
                 >
                   {/* Méta */}
-                  <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "16px" }}>
+                  <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "16px" }}>
                     {s.id} — {s.subtitle}
                   </div>
 
@@ -361,7 +361,7 @@ export default function ServicesPageContent() {
                       >
                         <CheckSquare
                           size={13}
-                          color="#8C3518"
+                          color="#C8A020"
                           style={{ flexShrink: 0, marginTop: "2px" }}
                           aria-hidden="true"
                         />
@@ -427,7 +427,7 @@ export default function ServicesPageContent() {
             >
               Notre processus
               <br />
-              <span style={{ color: "#8C3518" }}>en 4 étapes</span>
+              <span style={{ color: "#C8A020" }}>en 4 étapes</span>
             </h2>
             <div className="tech-divider" style={{ marginTop: "40px", maxWidth: "480px" }} />
           </motion.div>
@@ -476,11 +476,11 @@ export default function ServicesPageContent() {
                 </span>
 
                 {/* Étape */}
-                <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "20px" }}>
+                <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "20px" }}>
                   Étape {step.number}
                 </div>
 
-                <div style={{ height: "2px", width: "32px", background: "#8C3518", marginBottom: "20px" }} />
+                <div style={{ height: "2px", width: "32px", background: "#C8A020", marginBottom: "20px" }} />
 
                 <h3
                   className="font-industrial-md"
@@ -529,7 +529,7 @@ export default function ServicesPageContent() {
             >
               Votre toiture
               <br />
-              <span style={{ color: "#8C3518" }}>mérite mieux</span>
+              <span style={{ color: "#C8A020" }}>mérite mieux</span>
             </h2>
             <p
               style={{

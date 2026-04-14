@@ -85,7 +85,7 @@ export default function ServicesSection() {
             >
               Ce que nous
               <br />
-              <span style={{ color: "#8C3518" }}>construisons</span>
+              <span style={{ color: "#C8A020" }}>construisons</span>
             </h2>
             <p style={{ fontSize: "14px", color: "rgba(242,232,212,0.48)", lineHeight: 1.75, maxWidth: "340px", textWrap: "pretty" as "pretty" }}>
               Chaque chantier est suivi par notre chef maçon certifié.
@@ -117,7 +117,7 @@ export default function ServicesSection() {
                 textDecoration: "none",
                 color:          "inherit",
                 overflow:       "hidden",
-                border:         s.highlight ? "1px solid rgba(140,53,24,0.22)" : "none",
+                border:         s.highlight ? "1px solid rgba(200,160,32,0.22)" : "none",
               }}
             >
               <Image
@@ -149,13 +149,13 @@ export default function ServicesSection() {
               {s.highlight && (
                 <div aria-hidden="true" style={{
                   position:   "absolute", top: 0, left: 0, right: 0, height: "2px",
-                  background: "linear-gradient(90deg, transparent 0%, rgba(140,53,24,0.3) 45%, #8C3518 100%)",
+                  background: "linear-gradient(90deg, transparent 0%, rgba(200,160,32,0.3) 45%, #C8A020 100%)",
                   zIndex:     3,
                 }} />
               )}
 
               <div className="service-card-content">
-                <div className="font-mono-label" style={{ color: "#8C3518", marginBottom: "14px" }}>
+                <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "14px" }}>
                   {s.id} — {s.subtitle}
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "16px", gap: "12px" }}>
@@ -200,8 +200,8 @@ export default function ServicesSection() {
           style={{
             marginTop: "3px",
             padding: "52px 44px",
-            background: "rgba(140,53,24,0.055)",
-            border: "1px solid rgba(140,53,24,0.18)",
+            background: "rgba(200,160,32,0.055)",
+            border: "1px solid rgba(200,160,32,0.18)",
             display: "flex", alignItems: "center",
             justifyContent: "space-between", gap: "32px", flexWrap: "wrap",
           }}
