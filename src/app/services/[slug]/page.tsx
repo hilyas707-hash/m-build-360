@@ -14,58 +14,58 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-const BASE_URL = "https://toiture-site.vercel.app";
+const BASE_URL = "https://m-build-360.vercel.app";
 
 const serviceMetaOverrides: Record<
   string,
   { description: string; keywords: string[] }
 > = {
-  "pose-toiture": {
+  "maconnerie-neuve": {
     description:
-      "Pose de toitures neuves à Bruxelles et en Belgique — tuiles terre cuite, ardoises naturelles, zinc prépatiné RHEINZINK® et membrane EPDM. Conforme NBN B 62-002. Garantie décennale. Devis gratuit 48h.",
+      "Maçonnerie neuve à Bruxelles et en Belgique — construction de murs porteurs, fondations et structures en briques, parpaings et béton armé. Conforme Eurocode 6. Garantie décennale. Devis gratuit 48h.",
     keywords: [
-      "pose toiture neuve bruxelles",
-      "couvreur tuiles ardoises zinc",
-      "toiture epdm belgique",
-      "nbn b 62-002",
-      "rheinzink belgique",
-      "pose toiture garantie décennale",
+      "maçonnerie neuve bruxelles",
+      "construction murs porteurs belgique",
+      "fondations béton armé bruxelles",
+      "maçon briques parpaings belgique",
+      "eurocode 6 maçonnerie",
+      "garantie décennale maçonnerie",
     ],
   },
   renovation: {
     description:
-      "Rénovation lourde de toiture et charpente à Bruxelles et en Belgique. Diagnostic structurel photographié, remplacement de charpente, traitement fongicide certifié Ctb-B+. Aucune sous-traitance. Garantie décennale.",
+      "Rénovation et restauration de façades à Bruxelles et en Belgique. Diagnostic photographié, ravalement, rejointoiement de briques et réparation de fissures. Chaux naturelle NHL pour patrimoine. Garantie décennale.",
     keywords: [
-      "rénovation toiture bruxelles",
-      "remplacement charpente belgique",
-      "traitement bois ctb-b+",
-      "diagnostic charpente photographié",
-      "couvreur rénovation hainaut namur",
-      "garantie décennale toiture",
+      "rénovation façade bruxelles",
+      "ravalement façade belgique",
+      "rejointoiement briques belgique",
+      "réparation fissures façade",
+      "restauration patrimoine bâti belge",
+      "garantie décennale maçonnerie",
     ],
   },
-  isolation: {
+  facades: {
     description:
-      "Isolation thermique de toiture et amélioration PEB à Bruxelles et en Belgique — sarking R ≥ 6 m²K/W. Primes régionales 2025 jusqu'à 7 200 € en Wallonie. Dossier PEB inclus. Devis gratuit.",
+      "Isolation thermique de façade par l'extérieur (ITE) à Bruxelles et en Belgique — systèmes ETICS EPS ou laine de roche, crépis et enduits de finition. Primes régionales 2025 jusqu'à 60 €/m². ATG certifié.",
     keywords: [
-      "isolation toiture sarking bruxelles",
-      "prime isolation toiture wallonie 2025",
-      "peb toiture belgique",
-      "isolation pir pur r6",
-      "renolution bruxelles isolation",
-      "myrenovbonus isolation toiture",
+      "isolation façade ite bruxelles",
+      "etics eps laine roche belgique",
+      "prime isolation façade wallonie 2025",
+      "renolution bruxelles isolation murs",
+      "crepis enduit finition belgique",
+      "atg certification ite",
     ],
   },
-  zinguerie: {
+  terrasses: {
     description:
-      "Zinguerie et finitions métalliques à Bruxelles et en Belgique — gouttières zinc naturel, aluminium laqué ou cuivre, fabrication sur mesure. Réparation de fuites sans dépose de couverture. NBN EN 988.",
+      "Terrasses et dallage à Bruxelles et en Belgique — pose de carrelage grès cérame R11, pavés naturels (porphyre, granit), béton désactivé. Conception drainage conforme législation belge.",
     keywords: [
-      "zinguerie bruxelles",
-      "gouttières zinc naturel belgique",
-      "chéneau aluminium laqué",
-      "couvreur zingueur certifié",
-      "réparation fuite toiture belgique",
-      "nbn en 988 zinc bâtiment",
+      "terrasse carrelage extérieur bruxelles",
+      "dallage pavés naturels belgique",
+      "béton désactivé bruxelles",
+      "porphyre lessines belgique",
+      "grès cérame extérieur r11",
+      "maçon terrasse garantie décennale",
     ],
   },
 };
@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `${BASE_URL}/services/${slug}`;
 
   return {
-    title: `${service.title} — Couvreur Expert Belgique`,
+    title: `${service.title} — M Build 360 — Maçon Expert`,
     description,
     keywords,
     alternates: {
@@ -94,8 +94,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: "fr_BE",
       url: canonicalUrl,
-      siteName: "Toiture Expert Belgique",
-      title: `${service.title} — Couvreur Expert Belgique`,
+      siteName: "M Build 360",
+      title: `${service.title} — M Build 360 — Maçon Expert`,
       description,
       images: [
         {
@@ -109,7 +109,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${service.title} — Couvreur Expert Belgique`,
+      title: `${service.title} — M Build 360 — Maçon Expert`,
       description,
       images: ["/og-image.jpg"],
     },

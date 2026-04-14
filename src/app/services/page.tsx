@@ -5,45 +5,45 @@ import ServicesPageContent from "@/components/ServicesPageContent";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Services de toiture — Pose, Rénovation, Isolation & Zinguerie",
+  title: "Services de maçonnerie — Neuve, Rénovation, Façades & Terrasses",
   description:
-    "Découvrez nos 4 services de toiture : pose de tuiles, ardoises et zinc, rénovation lourde de charpente, isolation thermique PEB jusqu'à 7 200 € de primes, et zinguerie sur mesure. Couvreur certifié, garantie décennale, devis gratuit 48h.",
+    "Découvrez nos 4 services de maçonnerie : construction neuve (briques, parpaings, béton), rénovation et ravalement, isolation de façades ITE et terrasses & dallage. Maçon certifié, garantie décennale, devis gratuit 48h.",
   keywords: [
-    "services toiture belgique",
-    "pose toiture bruxelles",
-    "rénovation charpente belgique",
-    "isolation sarking peb primes",
-    "zinguerie gouttières zinc",
-    "couvreur certifié constructiv",
+    "services maçonnerie belgique",
+    "maçonnerie neuve bruxelles",
+    "rénovation façade belgique",
+    "isolation ite primes",
+    "terrasse dallage belgique",
+    "maçon certifié constructiv",
     "garantie décennale belgique",
-    "devis couvreur gratuit",
+    "devis maçonnerie gratuit",
   ],
   alternates: {
-    canonical: "https://toiture-site.vercel.app/services",
+    canonical: "https://m-build-360.vercel.app/services",
   },
   openGraph: {
     type: "website",
     locale: "fr_BE",
-    url: "https://toiture-site.vercel.app/services",
-    siteName: "Toiture Expert Belgique",
-    title: "Services de toiture — Pose, Rénovation, Isolation & Zinguerie",
+    url: "https://m-build-360.vercel.app/services",
+    siteName: "M Build 360",
+    title: "Services de maçonnerie — Neuve, Rénovation, Façades & Terrasses",
     description:
-      "Pose, rénovation, isolation thermique PEB et zinguerie. Couvreur expert certifié depuis 2004. Garantie décennale. Devis gratuit 48h.",
+      "Maçonnerie neuve, rénovation, isolation de façades ITE et terrasses. Maçon certifié depuis 2009. Garantie décennale. Devis gratuit 48h.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Services de toiture — Toiture Expert Belgique",
+        alt: "Services de maçonnerie — M Build 360",
         type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services de toiture — Toiture Expert Belgique",
+    title: "Services de maçonnerie — M Build 360",
     description:
-      "Pose, rénovation, isolation thermique PEB et zinguerie. Devis gratuit 48h. Garantie décennale.",
+      "Maçonnerie neuve, rénovation, isolation ITE et terrasses. Devis gratuit 48h. Garantie décennale.",
     images: ["/og-image.jpg"],
   },
 };

@@ -15,9 +15,9 @@ const contactInfo = [
   {
     icon: Mail,
     label: "E-mail",
-    value: "info@toiture-expert.be",
+    value: "info@m-build-360.be",
     sub: "Réponse sous 24h ouvrables",
-    href: "mailto:info@toiture-expert.be",
+    href: "mailto:info@m-build-360.be",
   },
   {
     icon: MapPin,

@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité & RGPD — Toiture Expert Belgique",
-  description: "Politique de confidentialité de Toiture Expert Belgique : traitement des données personnelles, droits RGPD, durée de conservation et contact DPO.",
+  title: "Politique de confidentialité & RGPD — M Build 360",
+  description: "Politique de confidentialité de M Build 360 : traitement des données personnelles, droits RGPD, durée de conservation et contact DPO.",
   robots: { index: true, follow: true },
 };
 
@@ -12,8 +12,8 @@ const sections = [
   {
     title: "Responsable du traitement",
     items: [
-      "Toiture Expert Belgique SRL est le responsable du traitement de vos données personnelles au sens du Règlement (UE) 2016/679 (RGPD).",
-      "Contact : info@toiture-expert.be — +32 (0)2 000 00 00",
+      "M Build 360 SRL est le responsable du traitement de vos données personnelles au sens du Règlement (UE) 2016/679 (RGPD).",
+      "Contact : info@m-build-360.be — +32 (0)2 000 00 00",
     ],
   },
   {
@@ -58,7 +58,7 @@ const sections = [
       "Droit à la limitation : restreindre le traitement dans certaines circonstances.",
       "Droit à la portabilité : recevoir vos données dans un format structuré et lisible.",
       "Droit d'opposition : vous opposer au traitement fondé sur l'intérêt légitime.",
-      "Pour exercer ces droits : info@toiture-expert.be — Réponse sous 30 jours.",
+      "Pour exercer ces droits : info@m-build-360.be — Réponse sous 30 jours.",
       "Vous pouvez également introduire une réclamation auprès de l'Autorité de protection des données (APD) belge : www.autoriteprotectiondonnees.be",
     ],
   },

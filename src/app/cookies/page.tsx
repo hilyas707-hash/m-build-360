@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Politique de cookies — Toiture Expert Belgique",
-  description: "Politique de cookies de Toiture Expert Belgique : types de cookies utilisés, durée de conservation et gestion de vos préférences.",
+  title: "Politique de cookies — M Build 360",
+  description: "Politique de cookies de M Build 360 : types de cookies utilisés, durée de conservation et gestion de vos préférences.",
   robots: { index: true, follow: true },
 };
 
@@ -271,10 +271,10 @@ export default function CookiesPage() {
               Pour toute question relative à notre utilisation des cookies ou pour exercer vos droits,
               contactez-nous à{" "}
               <a
-                href="mailto:info@toiture-expert.be"
+                href="mailto:info@m-build-360.be"
                 style={{ color: "#E8500A", textDecoration: "underline" }}
               >
-                info@toiture-expert.be
+                info@m-build-360.be
               </a>
             </p>
           </div>

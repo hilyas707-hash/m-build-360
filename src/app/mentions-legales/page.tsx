@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Mentions légales — Toiture Expert Belgique",
-  description: "Mentions légales du site Toiture Expert Belgique : éditeur, hébergeur, responsabilité éditoriale et propriété intellectuelle.",
+  title: "Mentions légales — M Build 360",
+  description: "Mentions légales du site M Build 360 : éditeur, hébergeur, responsabilité éditoriale et propriété intellectuelle.",
   robots: { index: true, follow: true },
 };
 
@@ -12,13 +12,13 @@ const sections = [
   {
     title: "Éditeur du site",
     content: [
-      "Raison sociale : Toiture Expert Belgique SRL",
+      "Raison sociale : M Build 360 SRL",
       "Forme juridique : Société à Responsabilité Limitée (SRL)",
       "Siège social : Bruxelles, Belgique",
       "Numéro de TVA : BE 0000.000.000",
       "Numéro d'entreprise BCE : 0000.000.000",
       "Téléphone : +32 (0)2 000 00 00",
-      "E-mail : info@toiture-expert.be",
+      "E-mail : info@m-build-360.be",
       "Responsable de la publication : Le gérant",
     ],
   },
@@ -35,15 +35,15 @@ const sections = [
     title: "Propriété intellectuelle",
     content: [
       "L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes) est protégé par le droit d'auteur et les droits de propriété intellectuelle applicables en Belgique.",
-      "Toute reproduction, représentation, modification ou exploitation, partielle ou totale, du contenu de ce site est interdite sans l'accord écrit préalable de Toiture Expert Belgique SRL.",
+      "Toute reproduction, représentation, modification ou exploitation, partielle ou totale, du contenu de ce site est interdite sans l'accord écrit préalable de M Build 360 SRL.",
     ],
   },
   {
     title: "Responsabilité",
     content: [
-      "Toiture Expert Belgique SRL s'efforce de maintenir les informations publiées sur ce site à jour et exactes. Cependant, la société ne peut garantir l'exactitude, l'exhaustivité ou l'actualité des informations diffusées.",
-      "Toiture Expert Belgique SRL décline toute responsabilité pour tout dommage direct ou indirect résultant de l'utilisation de ce site ou de l'impossibilité d'y accéder.",
-      "Des liens hypertextes peuvent renvoyer vers des sites tiers. Toiture Expert Belgique SRL n'est pas responsable du contenu de ces sites externes.",
+      "M Build 360 SRL s'efforce de maintenir les informations publiées sur ce site à jour et exactes. Cependant, la société ne peut garantir l'exactitude, l'exhaustivité ou l'actualité des informations diffusées.",
+      "M Build 360 SRL décline toute responsabilité pour tout dommage direct ou indirect résultant de l'utilisation de ce site ou de l'impossibilité d'y accéder.",
+      "Des liens hypertextes peuvent renvoyer vers des sites tiers. M Build 360 SRL n'est pas responsable du contenu de ces sites externes.",
     ],
   },
   {
