@@ -2,14 +2,13 @@
 
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "@phosphor-icons/react";
 
-const SPRING      = { duration: 0.7,  ease: [0.32, 0.72, 0, 1] as const };
-const SPRING_FAST = { duration: 0.55, ease: [0.16, 1,    0.3, 1] as const };
+const SPRING_UI = { type: "spring" as const, stiffness: 100, damping: 22 };
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const videoRef  = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     videoRef.current?.play().catch(() => {});
@@ -22,21 +21,28 @@ export default function HeroSection() {
     if (!ctx) return;
 
     const resize = () => {
-      canvas.width  = window.innerWidth;
+      canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
     resize();
 
-    type Particle = { x: number; y: number; vx: number; vy: number; size: number; opacity: number; };
+    type Particle = {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+    };
 
     const isMobile = window.innerWidth < 768;
-    const particles: Particle[] = Array.from({ length: isMobile ? 15 : 45 }, () => ({
-      x:       Math.random() * canvas.width,
-      y:       Math.random() * canvas.height,
-      vx:      (Math.random() - 0.5) * 0.25,
-      vy:      -Math.random() * 0.35 - 0.08,
-      size:    Math.random() * 1.5 + 0.4,
-      opacity: Math.random() * 0.25 + 0.04,
+    const particles: Particle[] = Array.from({ length: isMobile ? 12 : 38 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.22,
+      vy: -Math.random() * 0.32 - 0.06,
+      size: Math.random() * 1.4 + 0.35,
+      opacity: Math.random() * 0.22 + 0.03,
     }));
 
     let animId: number;
@@ -45,12 +51,12 @@ export default function HeroSection() {
       for (const p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(200,160,32,${p.opacity})`;
+        ctx.fillStyle = `rgba(184,146,42,${p.opacity})`;
         ctx.fill();
         p.x += p.vx;
         p.y += p.vy;
-        if (p.y < -10)               p.y = canvas.height + 10;
-        if (p.x < -10)               p.x = canvas.width  + 10;
+        if (p.y < -10) p.y = canvas.height + 10;
+        if (p.x < -10) p.x = canvas.width + 10;
         if (p.x > canvas.width + 10) p.x = -10;
       }
       animId = requestAnimationFrame(draw);
@@ -58,110 +64,128 @@ export default function HeroSection() {
     draw();
 
     window.addEventListener("resize", resize, { passive: true });
-    return () => { cancelAnimationFrame(animId); window.removeEventListener("resize", resize); };
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize", resize);
+    };
   }, []);
 
   return (
     <section
       id="accueil"
-      className="construction-grid scanlines"
-      style={{
-        position:      "relative",
-        minHeight:     "100dvh",
-        display:       "flex",
-        alignItems:    "center",
-        overflow:      "hidden",
-        paddingTop:    "108px",
-        paddingBottom: "96px",
-        background:    "#18130E",
-      }}
+      className="construction-grid scanlines relative min-h-[100dvh] overflow-hidden"
+      style={{ background: "var(--zinc)" }}
     >
-      <video
-        ref={videoRef}
-        autoPlay muted loop playsInline preload="metadata"
-        poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
-        aria-hidden="true"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", zIndex: 0 }}
+      <canvas
+        ref={canvasRef}
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-[1] opacity-[0.55]"
+      />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-[2]"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 72% 18%, rgba(184,146,42,0.07) 0%, transparent 55%), radial-gradient(ellipse 50% 45% at 12% 88%, rgba(14,16,17,0.5) 0%, transparent 50%)",
+        }}
+      />
+
+      <div
+        className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-[1400px] flex-col px-6 pb-20 pt-[calc(74px+env(safe-area-inset-top)+1.75rem)] lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-14 lg:pb-24 lg:pt-[calc(74px+env(safe-area-inset-top)+2rem)]"
       >
-        <source src="/video/Hero-bg.mp4" type="video/mp4" />
-      </video>
+        <div className="order-2 flex flex-col justify-center lg:order-1 lg:col-span-6 lg:pr-2">
+          <motion.h1
+            className="font-industrial text-[clamp(2rem,5.2vw,3.65rem)] leading-[0.98] tracking-[-0.035em] text-[var(--white)]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={SPRING_UI}
+          >
+            Bâtir solide,
+            <br />
+            <span style={{ color: "var(--orange)" }}>construire juste,</span>
+            <br />
+            livrer complet.
+          </motion.h1>
 
-      <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(15,15,15,0.74)", zIndex: 1 }} />
-      <div aria-hidden="true" style={{
-        position: "absolute", inset: 0, zIndex: 2,
-        background: [
-          "radial-gradient(ellipse at 15% 55%, rgba(200,160,32,0.11) 0%, transparent 52%)",
-          "radial-gradient(ellipse at 82% 8%,  rgba(15,15,15,0.55) 0%, transparent 52%)",
-          "radial-gradient(ellipse at 50% 100%, rgba(15,15,15,0.45) 0%, transparent 55%)",
-        ].join(", "),
-      }} />
+          <motion.div
+            className="tech-divider mt-8 mb-7 w-full max-w-[min(100%,420px)] origin-left"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ type: "spring", stiffness: 120, damping: 26, delay: 0.12 }}
+          />
 
-      <canvas ref={canvasRef} aria-hidden="true" style={{ position: "absolute", inset: 0, pointerEvents: "none", opacity: 0.7, zIndex: 4 }} />
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...SPRING_UI, delay: 0.14 }}
+            className="mb-10 max-w-[54ch] text-base leading-relaxed text-[rgba(242,232,212,0.62)]"
+            style={{ textWrap: "pretty" }}
+          >
+            Maçon certifié à Bruxelles et en Belgique. Maçonnerie neuve, rénovation de façades, terrasses
+            et dallage réalisés avec des matériaux durables. Garantie décennale.
+          </motion.p>
 
-      <div aria-hidden="true" style={{
-        position: "absolute", left: 0, top: 0, bottom: 0, width: "3px",
-        background: "linear-gradient(180deg, transparent 0%, #C8A020 18%, #C8A020 82%, transparent 100%)",
-        zIndex: 5,
-      }} />
-
-      <div style={{ maxWidth: "1160px", width: "100%", margin: "0 auto", padding: "0 24px", position: "relative", zIndex: 10 }}>
-
-        <motion.h1
-          className="font-industrial"
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={SPRING}
-          style={{ fontSize: "clamp(52px, 9.5vw, 136px)", color: "#F2E8D4" }}
-        >
-          Bâtir solide,
-          <br />
-          <span style={{ color: "#C8A020" }}>construire juste,</span>
-          <br />
-          livrer complet.
-        </motion.h1>
-
-        <motion.div
-          className="tech-divider"
-          initial={{ scaleX: 0, originX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          style={{ marginTop: "40px", marginBottom: "28px" }}
-        />
-
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...SPRING_FAST, delay: 0.4 }}
-          style={{
-            fontSize: "clamp(15px, 1.8vw, 18px)",
-            color: "rgba(242,232,212,0.62)",
-            lineHeight: 1.72,
-            maxWidth: "560px",
-            marginBottom: "44px",
-            textWrap: "pretty" as "pretty",
-          }}
-        >
-          Maçon certifié à Bruxelles et en Belgique. Maçonnerie neuve,
-          rénovation de façades, terrasses et dallage réalisés avec les
-          matériaux les plus durables du marché. Garantie décennale.
-        </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...SPRING_UI, delay: 0.22 }}
+            className="flex flex-wrap gap-3"
+          >
+            <a href="#contact" className="btn-primary">
+              Devis gratuit en 48h
+              <ArrowRight size={17} weight="bold" aria-hidden />
+            </a>
+            <a href="tel:+3200000000" className="btn-secondary">
+              <Phone size={15} weight="bold" aria-hidden />
+              Appeler maintenant
+            </a>
+          </motion.div>
+        </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...SPRING_FAST, delay: 0.54 }}
-          style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}
+          className="order-1 mb-12 w-full lg:order-2 lg:col-span-6 lg:mb-0"
+          initial={{ opacity: 0, x: 28 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ ...SPRING_UI, delay: 0.08 }}
         >
-          <a href="#contact" className="btn-primary">
-            Devis gratuit en 48h
-            <ArrowRight size={15} aria-hidden="true" />
-          </a>
-          <a href="tel:+3200000000" className="btn-secondary">
-            <Phone size={14} aria-hidden="true" />
-            Appeler maintenant
-          </a>
+          <div
+            className="relative mx-auto aspect-[16/11] w-full max-w-xl overflow-hidden rounded-2xl border border-white/[0.09] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] lg:aspect-[5/6] lg:max-h-[min(72dvh,680px)] lg:max-w-none"
+          >
+            <video
+              ref={videoRef}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="https://picsum.photos/seed/m360-landing-hero/1600/1000"
+              aria-hidden
+              className="absolute inset-0 z-0 h-full w-full object-cover"
+              style={{ objectPosition: "center 38%" }}
+            >
+              <source src="/video/hero-bg.mp4" type="video/mp4" />
+            </video>
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 z-[1]"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(14,16,17,0.15) 0%, rgba(14,16,17,0.55) 48%, rgba(14,16,17,0.82) 100%)",
+              }}
+            />
+          </div>
         </motion.div>
       </div>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-0 top-0 z-[5] w-[3px]"
+        style={{
+          background:
+            "linear-gradient(180deg, transparent 0%, var(--orange) 18%, var(--orange) 82%, transparent 100%)",
+        }}
+      />
     </section>
   );
 }

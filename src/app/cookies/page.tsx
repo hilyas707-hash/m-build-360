@@ -62,7 +62,7 @@ export default function CookiesPage() {
             >
               Politique
               <br />
-              <span style={{ color: "#C8A020" }}>cookies</span>
+              <span style={{ color: "var(--orange)" }}>cookies</span>
             </h1>
             <div className="tech-divider" style={{ marginTop: "32px" }} />
           </div>
@@ -77,7 +77,7 @@ export default function CookiesPage() {
               padding:       "20px 24px",
               background:    "rgba(200,160,32,0.05)",
               border:        "1px solid rgba(200,160,32,0.18)",
-              borderLeft:    "3px solid #C8A020",
+              borderLeft:    "3px solid var(--orange)",
               textWrap:      "pretty" as "pretty",
             }}
           >
@@ -103,7 +103,7 @@ export default function CookiesPage() {
                 >
                   <h2
                     className="font-industrial-md"
-                    style={{ fontSize: "15px", color: "#C8A020" }}
+                    style={{ fontSize: "15px", color: "var(--orange)" }}
                   >
                     {type.name}
                   </h2>
@@ -117,7 +117,7 @@ export default function CookiesPage() {
                       padding:       "3px 8px",
                       background:    type.required ? "rgba(200,160,32,0.12)" : "rgba(255,255,255,0.05)",
                       border:        `1px solid ${type.required ? "rgba(200,160,32,0.35)" : "rgba(255,255,255,0.1)"}`,
-                      color:         type.required ? "#C8A020" : "rgba(242,232,212,0.45)",
+                      color:         type.required ? "var(--orange)" : "rgba(242,232,212,0.45)",
                     }}
                   >
                     {type.required ? "Obligatoire" : "Optionnel"}
@@ -218,7 +218,7 @@ export default function CookiesPage() {
           <div>
             <h2
               className="font-industrial-md"
-              style={{ fontSize: "16px", color: "#C8A020", marginBottom: "16px" }}
+              style={{ fontSize: "16px", color: "var(--orange)", marginBottom: "16px" }}
             >
               Gérer vos préférences
             </h2>
@@ -264,7 +264,7 @@ export default function CookiesPage() {
               border:     "1px solid rgba(200,160,32,0.2)",
             }}
           >
-            <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "10px" }}>
+            <div className="font-mono-label" style={{ color: "var(--orange)", marginBottom: "10px" }}>
               Questions ?
             </div>
             <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.58)", lineHeight: 1.7 }}>
@@ -272,7 +272,7 @@ export default function CookiesPage() {
               contactez-nous à{" "}
               <a
                 href="mailto:info@m-build-360.be"
-                style={{ color: "#C8A020", textDecoration: "underline" }}
+                style={{ color: "var(--orange)", textDecoration: "underline" }}
               >
                 info@m-build-360.be
               </a>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "@phosphor-icons/react";
 
 const SPRING = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 
@@ -82,7 +82,7 @@ export default function ActualitesSection() {
             >
               Normes &
               <br />
-              <span style={{ color: "#C8A020" }}>réglementation</span>
+              <span style={{ color: "var(--orange)" }}>réglementation</span>
             </h2>
             <p
               style={{
@@ -197,7 +197,7 @@ export default function ActualitesSection() {
                     fontSize:      "11px",
                     fontWeight:    700,
                     letterSpacing: "0.1em",
-                    color:         "#C8A020",
+                    color:         "var(--orange)",
                     textDecoration: "none",
                     textTransform: "uppercase",
                     display:       "flex",
@@ -209,7 +209,7 @@ export default function ActualitesSection() {
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.gap = "8px"; }}
                 >
                   Vérifier mes primes maçonnerie
-                  <ArrowUpRight size={14} aria-hidden="true" />
+                  <ArrowUpRight size={14} weight="bold" aria-hidden />
                 </a>
                 <span
                   className="font-mono-label"
@@ -345,7 +345,7 @@ export default function ActualitesSection() {
           </div>
           <a href="#contact" className="btn-primary" style={{ flexShrink: 0 }}>
             Vérifier mes primes
-            <ArrowUpRight size={15} aria-hidden="true" />
+            <ArrowUpRight size={15} weight="bold" aria-hidden />
           </a>
         </motion.div>
       </div>

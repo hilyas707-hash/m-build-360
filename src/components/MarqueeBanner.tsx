@@ -19,7 +19,7 @@ export default function MarqueeBanner() {
       style={{
         borderTop:    "1px solid rgba(255,255,255,0.06)",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
-        background:   "rgba(200,160,32,0.07)",
+        background:   "rgba(184, 146, 42, 0.08)",
         padding:      "14px 0",
         overflow:     "hidden",
       }}
@@ -46,7 +46,7 @@ export default function MarqueeBanner() {
                 display:      "inline-block",
                 width:        "4px",
                 height:       "4px",
-                background:   "#C46030",
+                background:   "rgba(184, 146, 42, 0.55)",
                 borderRadius: "50%",
                 flexShrink:   0,
               }}

@@ -2,72 +2,28 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "@phosphor-icons/react";
+import { servicesData } from "@/data/services-data";
 
-const SPRING = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
+const SPRING = { type: "spring" as const, stiffness: 100, damping: 22 };
 
-const services = [
-  {
-    id: "01",
-    slug: "maconnerie-neuve",
-    title: "Maçonnerie neuve",
-    subtitle: "Briques · Parpaings · Béton armé",
-    description:
-      "Construction de murs porteurs, cloisons, fondations et structures complètes. Briques de parement, parpaings, béton coulé ou banché selon les exigences structurelles et esthétiques du projet.",
-    tags: ["Briques", "Parpaings", "Béton armé", "Fondations"],
-    highlight: true,
-    image: "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Maçonnerie neuve — construction de murs en briques",
-  },
-  {
-    id: "02",
-    slug: "renovation",
-    title: "Rénovation & restauration",
-    subtitle: "Ravalement · Rejointoiement · Fissures",
-    description:
-      "Diagnostic complet, ravalement de façades, rejointoiement de briques et pierres, réparation de fissures structurelles et non-structurelles. Restauration fidèle des façades anciennes.",
-    tags: ["Ravalement", "Rejointoiement", "Fissures", "Pierres"],
-    highlight: false,
-    image: "https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Rénovation façade — ravalement et rejointoiement",
-  },
-  {
-    id: "03",
-    slug: "facades",
-    title: "Façades & isolation",
-    subtitle: "ITE · Crépis · Enduits de finition",
-    description:
-      "Isolation thermique par l'extérieur (ITE), crépis minéraux et organiques, enduits de finition monocouche ou multicouches. Accès aux primes régionales 2025 pour l'isolation de façade.",
-    tags: ["ITE", "Crépis", "Enduits", "Primes"],
-    highlight: false,
-    image: "https://images.unsplash.com/photo-1564182842519-8a3b2af3e228?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Façades et enduits — isolation thermique extérieure",
-  },
-  {
-    id: "04",
-    slug: "terrasses",
-    title: "Terrasses & dallage",
-    subtitle: "Carrelage · Pavés · Béton désactivé",
-    description:
-      "Pose de carrelage extérieur grès cérame, pavés naturels (porphyre, granit, calcaire), béton désactivé ou imprimé. Terrasses, allées, cours et zones de stationnement.",
-    tags: ["Grès cérame", "Porphyre", "Béton désactivé", "Pavés"],
-    highlight: false,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Terrasses et dallage — pavés et carrelage extérieur",
-  },
-];
+function serviceSpanClass(index: number): string {
+  if (index === 0 || index === 3) return "md:col-span-7";
+  return "md:col-span-5";
+}
 
 export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="construction-grid"
-      style={{ paddingTop: "140px", paddingBottom: "140px", position: "relative", overflow: "hidden" }}
+      className="construction-grid relative overflow-hidden"
+      style={{ paddingTop: "140px", paddingBottom: "140px" }}
     >
-      <span className="bg-number" style={{ left: "-2%", top: "0" }} aria-hidden="true">02</span>
+      <span className="bg-number" style={{ left: "-2%", top: "0" }} aria-hidden>
+        02
+      </span>
 
       <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "0 24px", position: "relative", zIndex: 1 }}>
-
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,46 +34,46 @@ export default function ServicesSection() {
           <span className="tag-orange" style={{ marginBottom: "24px", display: "inline-flex" }}>
             Services de maçonnerie
           </span>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: "40px", flexWrap: "wrap" }}>
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
             <h2
-              className="font-industrial"
-              style={{ fontSize: "clamp(40px, 6.5vw, 88px)", color: "#F2E8D4", maxWidth: "700px" }}
+              className="font-industrial max-w-[min(100%,640px)] text-[clamp(2rem,5vw,4rem)] leading-[0.98] tracking-tighter text-[var(--white)] md:text-[clamp(2.25rem,5vw,4.5rem)]"
             >
               Ce que nous
               <br />
-              <span style={{ color: "#C8A020" }}>construisons</span>
+              <span style={{ color: "var(--orange)" }}>construisons</span>
             </h2>
-            <p style={{ fontSize: "14px", color: "rgba(242,232,212,0.48)", lineHeight: 1.75, maxWidth: "340px", textWrap: "pretty" as "pretty" }}>
-              Chaque chantier est suivi par notre chef maçon certifié.
-              Matériaux sourcés auprès de fournisseurs belges et
-              européens labellisés.
+            <p
+              className="max-w-[340px] text-sm leading-relaxed text-[rgba(242,232,212,0.48)]"
+              style={{ textWrap: "pretty" }}
+            >
+              Chaque chantier est suivi par notre chef maçon certifié. Matériaux sourcés auprès de fournisseurs
+              belges et européens labellisés.
             </p>
           </div>
-          <div className="tech-divider" style={{ marginTop: "44px" }} />
+          <div className="tech-divider mt-11" />
         </motion.div>
 
         <div
-          style={{ display: "grid", gridTemplateColumns: "repeat(1, 1fr)", gap: "2px", background: "rgba(255,255,255,0.04)" }}
-          className="md:grid-cols-2"
+          className="grid grid-cols-1 gap-[2px] bg-[rgba(255,255,255,0.04)] md:grid-cols-12"
         >
-          {services.map((s, i) => (
+          {servicesData.map((s, i) => (
             <motion.a
               key={s.id}
               href={`/services/${s.slug}`}
-              className="service-card"
-              initial={{ opacity: 0, y: 32 }}
+              className={`service-card ${serviceSpanClass(i)}`}
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ ...SPRING, delay: i * 0.09 }}
+              transition={{ ...SPRING, delay: i * 0.07 }}
               style={{
-                position:       "relative",
-                minHeight:      "420px",
-                display:        "flex",
-                alignItems:     "flex-end",
+                position: "relative",
+                minHeight: "420px",
+                display: "flex",
+                alignItems: "flex-end",
                 textDecoration: "none",
-                color:          "inherit",
-                overflow:       "hidden",
-                border:         s.highlight ? "1px solid rgba(200,160,32,0.22)" : "none",
+                color: "inherit",
+                overflow: "hidden",
+                border: i === 0 ? "1px solid rgba(184,146,42,0.2)" : "none",
               }}
             >
               <Image
@@ -125,66 +81,70 @@ export default function ServicesSection() {
                 alt={s.imageAlt}
                 fill
                 quality={80}
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 58vw"
                 style={{
-                  objectFit:      "cover",
+                  objectFit: "cover",
                   objectPosition: "center left",
-                  filter:         "grayscale(18%) contrast(1.06) brightness(0.78)",
-                  transition:     "transform 0.7s cubic-bezier(0.16,1,0.3,1)",
+                  filter: "grayscale(18%) contrast(1.06) brightness(0.78)",
+                  transition: "transform 0.7s cubic-bezier(0.16,1,0.3,1)",
                 }}
                 className="service-card-img"
               />
 
-              <div aria-hidden="true" style={{
-                position:   "absolute", inset: 0,
-                background: "linear-gradient(to right, rgba(10,8,5,0.04) 0%, rgba(10,8,5,0.38) 38%, rgba(10,8,5,0.88) 62%, rgba(10,8,5,0.98) 80%, #18130E 100%)",
-                zIndex:     1,
-              }} />
-              <div aria-hidden="true" style={{
-                position:   "absolute", inset: 0,
-                background: "linear-gradient(to top, rgba(15,15,15,0.65) 0%, transparent 50%)",
-                zIndex:     1,
-              }} />
+              <div
+                aria-hidden
+                className="absolute inset-0 z-[1]"
+                style={{
+                  background:
+                    "linear-gradient(to right, rgba(14,16,17,0.05) 0%, rgba(14,16,17,0.4) 38%, rgba(14,16,17,0.88) 62%, rgba(14,16,17,0.98) 80%, var(--zinc) 100%)",
+                }}
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 z-[1]"
+                style={{
+                  background: "linear-gradient(to top, rgba(14,16,17,0.65) 0%, transparent 50%)",
+                }}
+              />
 
-              {s.highlight && (
-                <div aria-hidden="true" style={{
-                  position:   "absolute", top: 0, left: 0, right: 0, height: "2px",
-                  background: "linear-gradient(90deg, transparent 0%, rgba(200,160,32,0.3) 45%, #C8A020 100%)",
-                  zIndex:     3,
-                }} />
+              {i === 0 && (
+                <div
+                  aria-hidden
+                  className="absolute left-0 right-0 top-0 z-[3] h-[2px]"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, transparent 0%, rgba(184,146,42,0.35) 45%, var(--orange) 100%)",
+                  }}
+                />
               )}
 
               <div className="service-card-content">
-                <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "14px" }}>
+                <div className="font-mono-label mb-3.5" style={{ color: "var(--orange)" }}>
                   {s.id} — {s.subtitle}
                 </div>
-                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "16px", gap: "12px" }}>
-                  <h3
-                    className="font-industrial-md"
-                    style={{ fontSize: "clamp(22px, 2.6vw, 32px)", color: "#F2E8D4", lineHeight: 1.1 }}
-                  >
+                <div className="mb-4 flex items-start justify-between gap-3">
+                  <h3 className="font-industrial-md text-[clamp(1.35rem,2.4vw,2rem)] leading-[1.1] text-[var(--white)]">
                     {s.title}
                   </h3>
                   <div
-                    className="card-arrow"
-                    aria-hidden="true"
-                    style={{
-                      width: "38px", height: "38px",
-                      border: "1px solid rgba(255,255,255,0.12)",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      flexShrink: 0,
-                    }}
+                    className="card-arrow flex h-[38px] w-[38px] shrink-0 items-center justify-center border border-[rgba(255,255,255,0.12)]"
+                    aria-hidden
                   >
-                    <ArrowUpRight size={15} color="rgba(242,232,212,0.5)" />
+                    <ArrowUpRight size={16} weight="bold" color="rgba(242,232,212,0.5)" />
                   </div>
                 </div>
-                <div style={{ height: "1px", background: "rgba(255,255,255,0.08)", marginBottom: "14px" }} />
-                <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.62)", lineHeight: 1.75, marginBottom: "22px", textWrap: "pretty" as "pretty" }}>
-                  {s.description}
+                <div className="mb-3.5 h-px bg-[rgba(255,255,255,0.08)]" />
+                <p
+                  className="mb-5 text-[13px] leading-relaxed text-[rgba(242,232,212,0.62)]"
+                  style={{ textWrap: "pretty" }}
+                >
+                  {s.shortDescription}
                 </p>
-                <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
+                <div className="flex flex-wrap gap-1.5">
                   {s.tags.map((tag) => (
-                    <span key={tag} className="tag-white">{tag}</span>
+                    <span key={tag} className="tag-white">
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -197,26 +157,19 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={SPRING}
-          style={{
-            marginTop: "3px",
-            padding: "52px 44px",
-            background: "rgba(200,160,32,0.055)",
-            border: "1px solid rgba(200,160,32,0.18)",
-            display: "flex", alignItems: "center",
-            justifyContent: "space-between", gap: "32px", flexWrap: "wrap",
-          }}
+          className="mt-[3px] flex flex-wrap items-center justify-between gap-8 border border-[rgba(184,146,42,0.18)] bg-[rgba(184,146,42,0.06)] px-11 py-[52px]"
         >
           <div>
-            <div className="font-industrial-md" style={{ fontSize: "clamp(18px, 2.8vw, 30px)", color: "#F2E8D4", marginBottom: "8px" }}>
+            <div className="font-industrial-md mb-2 text-[clamp(1.1rem,2.5vw,1.85rem)] text-[var(--white)]">
               Votre projet ne rentre pas dans une case ?
             </div>
-            <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.48)" }}>
+            <p className="text-[13px] text-[rgba(242,232,212,0.48)]">
               Nous analysons chaque chantier sur mesure. Contactez-nous pour un diagnostic gratuit.
             </p>
           </div>
-          <a href="#contact" className="btn-primary" style={{ flexShrink: 0 }}>
+          <a href="#contact" className="btn-primary shrink-0">
             Diagnostic gratuit
-            <ArrowUpRight size={15} aria-hidden="true" />
+            <ArrowUpRight size={16} weight="bold" aria-hidden />
           </a>
         </motion.div>
       </div>

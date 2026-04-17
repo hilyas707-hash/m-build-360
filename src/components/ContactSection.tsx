@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { PaperPlaneRight, Phone, EnvelopeSimple, MapPin, CheckCircle } from "@phosphor-icons/react";
 
 const contactInfo = [
   {
@@ -13,7 +13,7 @@ const contactInfo = [
     href: "tel:+3200000000",
   },
   {
-    icon: Mail,
+    icon: EnvelopeSimple,
     label: "E-mail",
     value: "info@m-build-360.be",
     sub: "Réponse sous 24h ouvrables",
@@ -80,7 +80,7 @@ export default function ContactSection() {
           bottom: 0,
           width: "4px",
           background:
-            "linear-gradient(180deg, transparent 0%, #C8A020 20%, #C8A020 80%, transparent 100%)",
+            "linear-gradient(180deg, transparent 0%, var(--orange) 20%, var(--orange) 80%, transparent 100%)",
         }}
       />
 
@@ -114,7 +114,7 @@ export default function ContactSection() {
           >
             Parlons de
             <br />
-            <span style={{ color: "#C8A020" }}>votre projet</span>
+            <span style={{ color: "var(--orange)" }}>votre projet</span>
           </h2>
           <div className="tech-divider" style={{ marginTop: "40px" }} />
         </motion.div>
@@ -148,7 +148,7 @@ export default function ContactSection() {
                   gap: "24px",
                 }}
               >
-                <CheckCircle size={56} color="#C8A020" />
+                <CheckCircle size={56} weight="duotone" color="var(--orange)" />
                 <div>
                   <div
                     className="font-industrial-md"
@@ -196,7 +196,7 @@ export default function ContactSection() {
                       name="nom"
                       value={form.nom}
                       onChange={handleChange}
-                      placeholder="Jean Dupont"
+                      placeholder="Elise Vandenberghe"
                       required
                     />
                   </div>
@@ -365,7 +365,7 @@ export default function ContactSection() {
                   </p>
                   <button type="submit" className="btn-primary">
                     Envoyer la demande
-                    <Send size={15} />
+                    <PaperPlaneRight size={17} weight="bold" />
                   </button>
                 </div>
               </form>
@@ -404,7 +404,7 @@ export default function ContactSection() {
                     flexShrink: 0,
                   }}
                 >
-                  <info.icon size={18} color="#C8A020" />
+                  <info.icon size={18} weight="bold" color="var(--orange)" />
                 </div>
                 <div>
                   <div
@@ -432,7 +432,7 @@ export default function ContactSection() {
                         transition: "color 0.15s",
                       }}
                       onMouseEnter={(e) =>
-                        ((e.currentTarget as HTMLAnchorElement).style.color = "#C8A020")
+                        ((e.currentTarget as HTMLAnchorElement).style.color = "var(--orange)")
                       }
                       onMouseLeave={(e) =>
                         ((e.currentTarget as HTMLAnchorElement).style.color = "#F2E8D4")
@@ -479,7 +479,7 @@ export default function ContactSection() {
                   fontWeight: 700,
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
-                  color: "#C8A020",
+                  color: "var(--orange)",
                   marginBottom: "8px",
                 }}
               >
@@ -515,7 +515,7 @@ export default function ContactSection() {
                   textDecoration: "none",
                 }}
               >
-                <Phone size={16} />
+                <Phone size={16} weight="bold" />
                 Appel direct 24h/24
               </a>
             </div>

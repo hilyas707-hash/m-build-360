@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, CheckSquare, ExternalLink, Phone } from "lucide-react";
+import { ArrowUpRight, CheckSquare, ArrowSquareOut, Phone } from "@phosphor-icons/react";
 import type { ServiceData } from "@/data/services-data";
 
 const SPRING      = { duration: 0.65, ease: [0.32, 0.72, 0, 1] as const };
@@ -60,7 +60,7 @@ export default function ServiceDetailContent({ service }: Props) {
             position:   "absolute",
             left:       0, top: 0, bottom: 0,
             width:      "3px",
-            background: "linear-gradient(180deg, transparent 0%, #C8A020 20%, #C8A020 80%, transparent 100%)",
+            background: "linear-gradient(180deg, transparent 0%, var(--orange) 20%, var(--orange) 80%, transparent 100%)",
             zIndex:     2,
           }}
         />
@@ -100,7 +100,7 @@ export default function ServiceDetailContent({ service }: Props) {
                 aria-hidden="true"
                 style={{
                   width: "5px", height: "5px", borderRadius: "50%",
-                  background: "#C8A020",
+                  background: "var(--orange)",
                   animation: "pulse-orange 2s cubic-bezier(0.65,0,0.35,1) infinite",
                   flexShrink: 0,
                 }}
@@ -118,7 +118,7 @@ export default function ServiceDetailContent({ service }: Props) {
           >
             {service.title.split(" ").slice(0, -2).join(" ")}
             <br />
-            <span style={{ color: "#C8A020" }}>
+            <span style={{ color: "var(--orange)" }}>
               {service.title.split(" ").slice(-2).join(" ")}
             </span>
           </motion.h1>
@@ -174,10 +174,10 @@ export default function ServiceDetailContent({ service }: Props) {
                   padding:    "24px 28px",
                   background: "rgba(200,160,32,0.06)",
                   border:     "1px solid rgba(200,160,32,0.2)",
-                  borderLeft: "3px solid #C8A020",
+                  borderLeft: "3px solid var(--orange)",
                 }}
               >
-                <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "12px" }}>
+                <div className="font-mono-label" style={{ color: "var(--orange)", marginBottom: "12px" }}>
                   [ Note technique ]
                 </div>
                 <p style={{ fontSize: "13px", color: "rgba(242,232,212,0.62)", lineHeight: 1.75 }}>
@@ -205,9 +205,10 @@ export default function ServiceDetailContent({ service }: Props) {
                   >
                     <CheckSquare
                       size={13}
-                      color="#C8A020"
+                      weight="fill"
+                      color="var(--orange)"
                       style={{ flexShrink: 0, marginTop: "3px" }}
-                      aria-hidden="true"
+                      aria-hidden
                     />
                     <span style={{ fontSize: "14px", color: "rgba(242,232,212,0.68)", lineHeight: 1.6 }}>
                       {item}
@@ -227,10 +228,10 @@ export default function ServiceDetailContent({ service }: Props) {
               <div style={{ marginTop: "40px", display: "flex", gap: "10px", flexWrap: "wrap" }}>
                 <a href="/#contact" className="btn-primary">
                   Devis gratuit
-                  <ArrowUpRight size={14} aria-hidden="true" />
+                  <ArrowUpRight size={14} weight="bold" aria-hidden />
                 </a>
                 <a href="tel:+3200000000" className="btn-secondary">
-                  <Phone size={13} aria-hidden="true" />
+                  <Phone size={13} weight="bold" aria-hidden />
                   Appel direct
                 </a>
               </div>
@@ -266,7 +267,7 @@ export default function ServiceDetailContent({ service }: Props) {
             >
               Normes &
               <br />
-              <span style={{ color: "#C8A020" }}>réglementations belges</span>
+              <span style={{ color: "var(--orange)" }}>réglementations belges</span>
             </h2>
             <div className="tech-divider" style={{ marginTop: "32px", maxWidth: "400px" }} />
           </motion.div>
@@ -300,12 +301,12 @@ export default function ServiceDetailContent({ service }: Props) {
                     position:   "absolute",
                     top:        0, left: 0, right: 0,
                     height:     "2px",
-                    background: "linear-gradient(90deg, #C8A020 0%, rgba(200,160,32,0.2) 70%, transparent 100%)",
+                    background: "linear-gradient(90deg, var(--orange) 0%, rgba(200,160,32,0.2) 70%, transparent 100%)",
                   }}
                 />
                 <div
                   className="font-mono-label"
-                  style={{ color: "#C8A020", marginBottom: "12px" }}
+                  style={{ color: "var(--orange)", marginBottom: "12px" }}
                 >
                   {norm.code}
                 </div>
@@ -359,7 +360,7 @@ export default function ServiceDetailContent({ service }: Props) {
                     el.style.borderColor = "rgba(255,255,255,0.08)";
                   }}
                 >
-                  <ExternalLink size={10} aria-hidden="true" />
+                  <ArrowSquareOut size={10} weight="bold" aria-hidden />
                   {link.label}
                 </a>
               ))}
@@ -394,7 +395,7 @@ export default function ServiceDetailContent({ service }: Props) {
             >
               Primes
               <br />
-              <span style={{ color: "#C8A020" }}>par région</span>
+              <span style={{ color: "var(--orange)" }}>par région</span>
             </h2>
             <div className="tech-divider" style={{ marginTop: "32px", maxWidth: "360px" }} />
           </motion.div>
@@ -425,7 +426,7 @@ export default function ServiceDetailContent({ service }: Props) {
                 }}
               >
                 {/* Indicateur région */}
-                <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "16px" }}>
+                <div className="font-mono-label" style={{ color: "var(--orange)", marginBottom: "16px" }}>
                   {prime.region}
                 </div>
 
@@ -463,10 +464,10 @@ export default function ServiceDetailContent({ service }: Props) {
                     transition:     "color 0.2s",
                     alignSelf:      "flex-start",
                   }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#C8A020"; }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "var(--orange)"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(200,160,32,0.6)"; }}
                 >
-                  <ExternalLink size={9} aria-hidden="true" />
+                  <ArrowSquareOut size={9} weight="bold" aria-hidden />
                   Site officiel {prime.region}
                 </a>
               </motion.div>
@@ -614,7 +615,7 @@ export default function ServiceDetailContent({ service }: Props) {
             >
               Devis gratuit
               <br />
-              <span style={{ color: "#C8A020" }}>sous 48 heures</span>
+              <span style={{ color: "var(--orange)" }}>sous 48 heures</span>
             </h2>
             <p
               style={{
@@ -632,7 +633,7 @@ export default function ServiceDetailContent({ service }: Props) {
             <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
               <a href="/#contact" className="btn-primary">
                 Demander un devis
-                <ArrowUpRight size={15} aria-hidden="true" />
+                <ArrowUpRight size={15} weight="bold" aria-hidden />
               </a>
               <a href="/services" className="btn-secondary">
                 Tous les services

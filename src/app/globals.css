@@ -1,38 +1,37 @@
 @import "tailwindcss";
 
 /* ============================================================
-   SYSTÈME DE DESIGN — M BUILD 360
-   Archétype : Maçonnerie Industrielle
-   Mode : Dark — substrat ardoise chaude #18130E
+   SYSTÈME DE DESIGN — M BUILD 360 × Taste Skill
+   Canvas OLED — #0e1011 · accent unique désaturé
    ============================================================ */
 
 :root {
-  /* ── Ardoise & pierre — substrat chantier ── */
-  --zinc:         #18130E;   /* ardoise chaude */
-  --zinc-mid:     #211710;   /* pierre levée */
-  --zinc-raised:  #2C1F14;   /* surface haute */
-  --zinc-border:  rgba(215, 190, 158, 0.08);
+  /* ── Substrat — neutre chaud cohérent (pas de gris froid mélangés) ── */
+  --zinc:         #0e1011;
+  --zinc-mid:     #16191c;
+  --zinc-raised:  #1e2226;
+  --zinc-border:  rgba(215, 196, 168, 0.07);
 
-  /* ── Brique flamande — accent primaire ── */
-  --orange:        #C8A020;  /* brique belge profonde */
-  --orange-hover:  #A84826;
-  --orange-dim:    rgba(140, 53, 24, 0.10);
-  --orange-border: rgba(140, 53, 24, 0.32);
-  --orange-glow:   rgba(140, 53, 24, 0.18);
+  /* ── Accent unique — or chantier (saturation contenue) ── */
+  --orange:        #b8922a;
+  --orange-hover:  #9a7622;
+  --orange-dim:    rgba(184, 146, 42, 0.12);
+  --orange-border: rgba(184, 146, 42, 0.28);
+  --orange-glow:   rgba(184, 146, 42, 0.12);
 
-  /* ── Terre cuite — accent secondaire ── */
-  --terra:         #C46030;
-  --terra-dim:     rgba(196, 96, 48, 0.12);
-  --terra-border:  rgba(196, 96, 48, 0.28);
+  /* ── Ton terre — uniquement pour gradients très légers ── */
+  --terra:         #a8703a;
+  --terra-dim:     rgba(168, 112, 58, 0.08);
+  --terra-border:  rgba(168, 112, 58, 0.2);
 
   /* ── Pierre calcaire & mortier — neutrals ── */
   --pierre:        #9A8870;  /* mortier / calcaire */
   --sable:         #C4A878;  /* sable / pierre dorée */
 
   /* ── Sémantique (noms maintenus pour compatibilité) ── */
-  --brick:         #C8A020;
+  --brick:         var(--orange);
   --concrete:      #211710;
-  --anthracite:    #0E0A07;
+  --anthracite:    #0a0c0e;
 
   /* ── Parchemin — texte chaud ── */
   --white:         #F2E8D4;  /* parchemin lin */
@@ -47,9 +46,9 @@
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
 
-  /* Polices — valeurs de repli (next/font les remplace via classe sur <html>) */
-  --font-display: 'Arial Black', sans-serif;
-  --font-mono:    'Courier New', monospace;
+  /* Polices — Outfit + JetBrains Mono (next/font sur <html>) */
+  --font-display: system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
 }
 
 /* ============================================================
@@ -68,7 +67,7 @@ html {
 body {
   background-color: var(--zinc);
   color: var(--white);
-  font-family: var(--font-display), 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -128,19 +127,19 @@ body::after {
    Archivo Black = grotesque suisse lourd — lettres en blocs
    ============================================================ */
 .font-industrial {
-  font-family: var(--font-display), 'Arial Black', sans-serif;
-  font-weight: 400; /* Archivo Black n'a qu'un seul poids */
-  letter-spacing: -0.04em;
-  line-height: 0.91;
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.96;
   text-transform: uppercase;
   text-wrap: balance;
 }
 
 .font-industrial-md {
-  font-family: var(--font-display), 'Arial Black', sans-serif;
-  font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1.0;
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  line-height: 1.05;
   text-transform: uppercase;
 }
 
@@ -183,8 +182,8 @@ body::after {
 
 .btn-primary:hover {
   background-color: var(--orange-hover);
-  transform: translate(-3px, -3px);
-  box-shadow: 5px 5px 0px rgba(140, 53, 24, 0.4);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 rgba(14, 16, 17, 0.45);
 }
 
 .btn-primary:active {
@@ -308,12 +307,12 @@ body::after {
 }
 
 .service-card:hover {
-  border-color: rgba(140, 53, 24, 0.28);
+  border-color: rgba(184, 146, 42, 0.22);
   background: var(--zinc-raised);
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow:
-    0 28px 56px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(140, 53, 24, 0.12);
+    0 24px 48px rgba(14, 16, 17, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 /* Icône flèche — cinétique au hover de la carte parente */
@@ -435,8 +434,8 @@ body::after {
    ANIMATIONS SYSTÈME
    ============================================================ */
 @keyframes pulse-orange {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(140, 53, 24, 0.45); }
-  50%       { box-shadow: 0 0 0 14px rgba(155, 55, 34, 0); }
+  0%, 100% { box-shadow: inset 0 0 0 1px rgba(184, 146, 42, 0.35); }
+  50%       { box-shadow: inset 0 0 0 1px rgba(184, 146, 42, 0.55), 0 0 0 10px rgba(184, 146, 42, 0); }
 }
 
 @keyframes pulse-green {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowUpRight } from "lucide-react";
+import { X, ArrowUpRight } from "@phosphor-icons/react";
 
 const WA_NUMBER = "3200000000";
 
@@ -103,7 +103,7 @@ export default function WhatsAppButton() {
                   padding:        0,
                 }}
               >
-                <X size={12} />
+                <X size={12} weight="bold" />
               </button>
             </div>
 
@@ -140,7 +140,7 @@ export default function WhatsAppButton() {
                 >
                   {opt.label}
                 </span>
-                <ArrowUpRight size={13} color="rgba(29,185,84,0.7)" style={{ flexShrink: 0 }} />
+                <ArrowUpRight size={13} weight="bold" color="rgba(29,185,84,0.7)" style={{ flexShrink: 0 }} />
               </a>
             ))}
           </motion.div>
@@ -183,7 +183,7 @@ export default function WhatsAppButton() {
               transition={{ duration: 0.15 }}
               style={{ display: "flex" }}
             >
-              <X size={20} color="#fff" />
+              <X size={20} weight="bold" color="#fff" />
             </motion.span>
           ) : (
             <motion.span key="wa"

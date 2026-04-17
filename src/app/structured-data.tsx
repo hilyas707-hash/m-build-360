@@ -1,5 +1,3 @@
-"use client";
-
 const BASE_URL = "https://m-build-360.vercel.app";
 
 const localBusinessSchema = {

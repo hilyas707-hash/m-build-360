@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, X, ChevronDown } from "lucide-react";
+import { Phone, X, CaretDown } from "@phosphor-icons/react";
 
 const serviceLinks = [
   { id: "01", slug: "maconnerie-neuve", label: "Maçonnerie neuve",        sub: "Briques · Parpaings · Béton"     },
@@ -50,7 +50,7 @@ export default function Navbar() {
         backdropFilter:       scrolled ? "blur(20px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
       }}>
-        <div aria-hidden="true" style={{ height: "2px", background: "linear-gradient(90deg, #C8A020 0%, rgba(200,160,32,0.4) 60%, transparent 100%)" }} />
+        <div aria-hidden="true" style={{ height: "2px", background: "linear-gradient(90deg, var(--orange) 0%, rgba(200,160,32,0.4) 60%, transparent 100%)" }} />
 
         <nav role="navigation" aria-label="Navigation principale" style={{
           maxWidth: "1160px", margin: "0 auto", padding: "0 24px",
@@ -60,7 +60,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", flexShrink: 0 }}>
             <div style={{
-              width: "32px", height: "32px", background: "#C8A020",
+              width: "32px", height: "32px", background: "var(--orange)",
               clipPath: "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }} aria-hidden="true">
@@ -80,7 +80,7 @@ export default function Navbar() {
               <div style={{
                 fontFamily: "var(--font-mono), monospace",
                 fontSize: "8px", letterSpacing: "0.2em",
-                textTransform: "uppercase", color: "#C8A020", marginTop: "2px",
+                textTransform: "uppercase", color: "var(--orange)", marginTop: "2px",
               }}>
                 Maçonnerie
               </div>
@@ -106,14 +106,14 @@ export default function Navbar() {
                   fontFamily:    "var(--font-mono), monospace",
                   fontSize:      "10px", fontWeight: 700,
                   letterSpacing: "0.1em", textTransform: "uppercase",
-                  color:         servicesActive ? "#C8A020" : "rgba(242,232,212,0.65)",
+                  color:         servicesActive ? "var(--orange)" : "rgba(242,232,212,0.65)",
                   transition:    "all 0.18s",
                   touchAction:   "manipulation",
                 }}
               >
                 Services
                 <motion.span animate={{ rotate: drop ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                  <ChevronDown size={11} aria-hidden="true" />
+                  <CaretDown size={11} weight="bold" aria-hidden />
                 </motion.span>
               </button>
 
@@ -131,7 +131,7 @@ export default function Navbar() {
                       width:      "310px",
                       background: "#0F0B08",
                       border:     "1px solid rgba(255,255,255,0.08)",
-                      borderTop:  "2px solid #C8A020",
+                      borderTop:  "2px solid var(--orange)",
                       zIndex:     300,
                     }}
                   >
@@ -145,7 +145,7 @@ export default function Navbar() {
                           padding:        "14px 18px",
                           textDecoration: "none",
                           borderBottom:   i < serviceLinks.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none",
-                          borderLeft:     pathname === `/services/${s.slug}` ? "2px solid #C8A020" : "2px solid transparent",
+                          borderLeft:     pathname === `/services/${s.slug}` ? "2px solid var(--orange)" : "2px solid transparent",
                           transition:     "background 0.15s",
                         }}
                         onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(200,160,32,0.07)"; }}
@@ -154,7 +154,7 @@ export default function Navbar() {
                         <span style={{
                           fontFamily:    "var(--font-mono), monospace",
                           fontSize:      "9px", fontWeight: 700,
-                          color:         "#C8A020", letterSpacing: "0.1em",
+                          color:         "var(--orange)", letterSpacing: "0.1em",
                           flexShrink:    0,
                         }}>
                           {s.id}
@@ -212,7 +212,7 @@ export default function Navbar() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#F2E8D4"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "rgba(242,232,212,0.6)"; }}
             >
-              <Phone size={12} color="#C8A020" aria-hidden="true" />
+              <Phone size={12} weight="bold" color="var(--orange)" aria-hidden />
               +32 (0)2 000 00 00
             </a>
             <a href="#contact" className="btn-primary" style={{ fontSize: "11px", padding: "9px 18px" }}>
@@ -241,7 +241,7 @@ export default function Navbar() {
                 touchAction:    "manipulation",
               }}
             >
-              <Phone size={16} color="#C8A020" aria-hidden="true" />
+              <Phone size={16} weight="bold" color="var(--orange)" aria-hidden />
             </a>
             <button
               onClick={() => setOpen(true)}
@@ -259,7 +259,7 @@ export default function Navbar() {
               }}
             >
               <span style={{ width: "18px", height: "1.5px", background: "#F2E8D4", display: "block" }} aria-hidden="true" />
-              <span style={{ width: "12px", height: "1.5px", background: "#C8A020",  display: "block" }} aria-hidden="true" />
+              <span style={{ width: "12px", height: "1.5px", background: "var(--orange)",  display: "block" }} aria-hidden="true" />
               <span style={{ width: "18px", height: "1.5px", background: "#F2E8D4", display: "block" }} aria-hidden="true" />
             </button>
           </div>
@@ -310,7 +310,7 @@ export default function Navbar() {
               overflowY:  "auto",
             }}
           >
-            <div aria-hidden="true" style={{ height: "2px", background: "#C8A020", flexShrink: 0 }} />
+            <div aria-hidden="true" style={{ height: "2px", background: "var(--orange)", flexShrink: 0 }} />
 
             {/* Header panel */}
             <div style={{
@@ -339,7 +339,7 @@ export default function Navbar() {
                   touchAction: "manipulation",
                 }}
               >
-                <X size={18} />
+                <X size={18} weight="bold" />
               </button>
             </div>
 
@@ -354,7 +354,7 @@ export default function Navbar() {
                     display:        "flex", alignItems: "center", gap: "16px",
                     minHeight:      "64px", padding: "0 20px",
                     textDecoration: "none",
-                    borderLeft:     pathname === `/services/${s.slug}` ? "3px solid #C8A020" : "3px solid transparent",
+                    borderLeft:     pathname === `/services/${s.slug}` ? "3px solid var(--orange)" : "3px solid transparent",
                     borderBottom:   "1px solid rgba(255,255,255,0.04)",
                     transition:     "background 0.15s",
                   }}
@@ -364,7 +364,7 @@ export default function Navbar() {
                   <span style={{
                     fontFamily:    "var(--font-mono), monospace",
                     fontSize:      "10px", fontWeight: 700,
-                    color:         "#C8A020", flexShrink: 0,
+                    color:         "var(--orange)", flexShrink: 0,
                   }}>
                     {s.id}
                   </span>

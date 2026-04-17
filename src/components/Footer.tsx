@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Mail } from "lucide-react";
+import { Phone, EnvelopeSimple } from "@phosphor-icons/react";
 
 const navLinks = [
   { label: "Actualités", href: "/#actualites" },
@@ -21,7 +21,7 @@ export default function Footer() {
     <footer style={{ background: "#0F0C08", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div aria-hidden="true" style={{
         height:     "3px",
-        background: "repeating-linear-gradient(90deg,#C8A020 0px,#C8A020 12px,#2C2C2C 12px,#2C2C2C 16px,#0F0C08 16px,#0F0C08 34px)",
+        background: "repeating-linear-gradient(90deg,var(--orange) 0px,var(--orange) 12px,#2C2C2C 12px,#2C2C2C 16px,#0F0C08 16px,#0F0C08 34px)",
         opacity:    0.55,
       }} />
 
@@ -30,7 +30,7 @@ export default function Footer() {
 
           <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
             <div style={{
-              width: "28px", height: "28px", background: "#C8A020",
+              width: "28px", height: "28px", background: "var(--orange)",
               clipPath: "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }} aria-hidden="true">
@@ -42,7 +42,7 @@ export default function Footer() {
               <div style={{ fontFamily: "var(--font-display), sans-serif", fontSize: "11px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#F2E8D4", lineHeight: 1 }}>
                 M Build 360
               </div>
-              <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#C8A020", marginTop: "2px" }}>
+              <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--orange)", marginTop: "2px" }}>
                 Maçonnerie
               </div>
             </div>
@@ -51,11 +51,11 @@ export default function Footer() {
           <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "6px 0" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "20px", paddingRight: "24px", marginRight: "24px", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
               <a href="tel:+3200000000" className="footer-link" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Phone size={10} color="#C8A020" />
+                <Phone size={10} weight="bold" color="var(--orange)" />
                 <span>+32 (0)2 000 00 00</span>
               </a>
               <a href="mailto:info@m-build-360.be" className="footer-link" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Mail size={10} color="#C8A020" />
+                <EnvelopeSimple size={10} weight="bold" color="var(--orange)" />
                 <span>info@m-build-360.be</span>
               </a>
             </div>

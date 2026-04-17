@@ -101,7 +101,7 @@ export default function ConfidentialitePage() {
             >
               Politique de
               <br />
-              <span style={{ color: "#C8A020" }}>confidentialité</span>
+              <span style={{ color: "var(--orange)" }}>confidentialité</span>
             </h1>
             <div className="tech-divider" style={{ marginTop: "32px" }} />
           </div>
@@ -112,7 +112,7 @@ export default function ConfidentialitePage() {
               <div key={s.title}>
                 <h2
                   className="font-industrial-md"
-                  style={{ fontSize: "16px", color: "#C8A020", marginBottom: "16px" }}
+                  style={{ fontSize: "16px", color: "var(--orange)", marginBottom: "16px" }}
                 >
                   {s.title}
                 </h2>

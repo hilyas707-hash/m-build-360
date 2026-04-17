@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, CheckSquare, Phone } from "lucide-react";
+import { ArrowUpRight, CheckSquare, Phone } from "@phosphor-icons/react";
 
 const SPRING      = { duration: 0.65, ease: [0.32, 0.72, 0, 1] as const };
 const SPRING_FAST = { duration: 0.5,  ease: [0.16, 1,    0.3, 1] as const };
@@ -131,7 +131,7 @@ export default function ServicesPageContent() {
           aria-hidden="true"
           style={{
             position: "absolute", left: 0, top: 0, bottom: 0, width: "3px",
-            background: "linear-gradient(180deg, transparent 0%, #C8A020 20%, #C8A020 80%, transparent 100%)",
+            background: "linear-gradient(180deg, transparent 0%, var(--orange) 20%, var(--orange) 80%, transparent 100%)",
           }}
         />
 
@@ -177,7 +177,7 @@ export default function ServicesPageContent() {
                 aria-hidden="true"
                 style={{
                   width: "5px", height: "5px", borderRadius: "50%",
-                  background: "#C8A020",
+                  background: "var(--orange)",
                   animation: "pulse-orange 2s cubic-bezier(0.65,0,0.35,1) infinite",
                   flexShrink: 0,
                 }}
@@ -195,7 +195,7 @@ export default function ServicesPageContent() {
           >
             Nos prestations
             <br />
-            <span style={{ color: "#C8A020" }}>en toiture</span>
+            <span style={{ color: "var(--orange)" }}>en toiture</span>
           </motion.h1>
 
           <motion.div
@@ -315,7 +315,7 @@ export default function ServicesPageContent() {
                   }}
                 >
                   {/* Méta */}
-                  <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "16px" }}>
+                  <div className="font-mono-label" style={{ color: "var(--orange)", marginBottom: "16px" }}>
                     {s.id} — {s.subtitle}
                   </div>
 
@@ -361,9 +361,10 @@ export default function ServicesPageContent() {
                       >
                         <CheckSquare
                           size={13}
-                          color="#C8A020"
+                          weight="fill"
+                          color="var(--orange)"
                           style={{ flexShrink: 0, marginTop: "2px" }}
-                          aria-hidden="true"
+                          aria-hidden
                         />
                         <span style={{ fontSize: "13px", color: "rgba(242,232,212,0.62)", lineHeight: 1.55 }}>
                           {item}
@@ -388,7 +389,7 @@ export default function ServicesPageContent() {
                   <div style={{ marginTop: "auto" }}>
                     <a href="/#contact" className="btn-primary">
                       Demander un devis
-                      <ArrowUpRight size={14} aria-hidden="true" />
+                      <ArrowUpRight size={14} weight="bold" aria-hidden />
                     </a>
                   </div>
                 </div>
@@ -427,7 +428,7 @@ export default function ServicesPageContent() {
             >
               Notre processus
               <br />
-              <span style={{ color: "#C8A020" }}>en 4 étapes</span>
+              <span style={{ color: "var(--orange)" }}>en 4 étapes</span>
             </h2>
             <div className="tech-divider" style={{ marginTop: "40px", maxWidth: "480px" }} />
           </motion.div>
@@ -476,11 +477,11 @@ export default function ServicesPageContent() {
                 </span>
 
                 {/* Étape */}
-                <div className="font-mono-label" style={{ color: "#C8A020", marginBottom: "20px" }}>
+                <div className="font-mono-label" style={{ color: "var(--orange)", marginBottom: "20px" }}>
                   Étape {step.number}
                 </div>
 
-                <div style={{ height: "2px", width: "32px", background: "#C8A020", marginBottom: "20px" }} />
+                <div style={{ height: "2px", width: "32px", background: "var(--orange)", marginBottom: "20px" }} />
 
                 <h3
                   className="font-industrial-md"
@@ -529,7 +530,7 @@ export default function ServicesPageContent() {
             >
               Votre toiture
               <br />
-              <span style={{ color: "#C8A020" }}>mérite mieux</span>
+              <span style={{ color: "var(--orange)" }}>mérite mieux</span>
             </h2>
             <p
               style={{
@@ -547,13 +548,13 @@ export default function ServicesPageContent() {
             <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
               <a href="/#contact" className="btn-primary">
                 Devis gratuit en 48h
-                <ArrowUpRight size={15} aria-hidden="true" />
+                <ArrowUpRight size={15} weight="bold" aria-hidden />
               </a>
               <a
                 href="tel:+3200000000"
                 className="btn-secondary"
               >
-                <Phone size={14} aria-hidden="true" />
+                <Phone size={14} weight="bold" aria-hidden />
                 Appel direct
               </a>
             </div>

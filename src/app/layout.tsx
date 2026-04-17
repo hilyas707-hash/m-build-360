@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Space_Mono } from "next/font/google";
+import { Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./structured-data";
 
-const archivoBlack = Archivo_Black({
-  weight: "400",
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
   preload: true,
 });
 
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+  weight: ["400", "700"],
   display: "swap",
   preload: true,
 });
@@ -100,7 +99,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr-BE" className={`${archivoBlack.variable} ${spaceMono.variable}`}>
+    <html lang="fr-BE" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
       <body>
         <StructuredData />
         {children}

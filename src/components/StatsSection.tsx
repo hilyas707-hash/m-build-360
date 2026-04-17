@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: 15,   suffix: "+",    label: "Années d'expérience",   sublabel: "Maçon certifié depuis 2009"          },
-  { value: 850,  suffix: "+",    label: "Chantiers réalisés",    sublabel: "En Belgique et grand-duché"           },
-  { value: 97,   suffix: "%",    label: "Clients satisfaits",    sublabel: "Score moyen sur 4 plateformes"        },
+  { value: 847,  suffix: "+",    label: "Chantiers réalisés",    sublabel: "En Belgique et Luxembourg"             },
+  { value: 96,   suffix: "%",    label: "Clients satisfaits",    sublabel: "Score moyen sur 4 plateformes"        },
   { value: 10,   suffix: " ans", label: "Garantie décennale",    sublabel: "Sur tous les travaux structurels"     },
 ];
 
@@ -56,7 +56,7 @@ function StatItem({
           fontFamily:         "var(--font-mono), monospace",
           fontSize:           "clamp(22px, 3.5vw, 44px)",
           fontWeight:         700,
-          color:              "#C8A020",
+          color:              "var(--orange)",
           letterSpacing:      "-0.03em",
           lineHeight:         1.15,
           marginBottom:       "7px",

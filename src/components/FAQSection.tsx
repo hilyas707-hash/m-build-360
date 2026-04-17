@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus } from "@phosphor-icons/react";
 
 const faqs = [
   {
@@ -80,7 +80,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
           flexShrink: 0,
           transition: "all 0.25s cubic-bezier(0.16,1,0.3,1)",
         }}>
-          {open ? <Minus size={13} color="#C8A020" aria-hidden="true" /> : <Plus size={13} color="rgba(242,232,212,0.45)" aria-hidden="true" />}
+          {open ? <Minus size={13} weight="bold" color="var(--orange)" aria-hidden /> : <Plus size={13} weight="bold" color="rgba(242,232,212,0.45)" aria-hidden />}
         </div>
       </button>
       <AnimatePresence initial={false}>
@@ -127,7 +127,7 @@ export default function FAQSection() {
             <h2 className="font-industrial" style={{ fontSize: "clamp(36px, 6vw, 80px)", color: "#F2E8D4", maxWidth: "600px" }}>
               Vos questions,
               <br />
-              <span style={{ color: "#C8A020" }}>nos réponses</span>
+              <span style={{ color: "var(--orange)" }}>nos réponses</span>
             </h2>
             <p style={{ fontSize: "14px", color: "rgba(240,239,233,0.5)", lineHeight: 1.7, maxWidth: "340px" }}>
               Primes, garanties, délais, urgences. Tout ce que vous devez
@@ -157,7 +157,7 @@ export default function FAQSection() {
                     transition:    "all 0.25s cubic-bezier(0.16,1,0.3,1)",
                     marginBottom:  "4px",
                   }}
-                  onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.color = "#F2E8D4"; el.style.borderLeftColor = "#C8A020"; }}
+                  onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.color = "#F2E8D4"; el.style.borderLeftColor = "var(--orange)"; }}
                   onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.color = "rgba(242,232,212,0.5)"; el.style.borderLeftColor = "rgba(255,255,255,0.07)"; }}
                 >
                   {cat.category}
@@ -165,7 +165,7 @@ export default function FAQSection() {
               ))}
 
               <div style={{ marginTop: "48px", padding: "24px", background: "rgba(200,160,32,0.08)", border: "1px solid rgba(200,160,32,0.25)" }}>
-                <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#C8A020", marginBottom: "12px" }}>
+                <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--orange)", marginBottom: "12px" }}>
                   Urgence 24h/24
                 </div>
                 <p style={{ fontSize: "12px", color: "rgba(240,239,233,0.55)", lineHeight: 1.6, marginBottom: "20px" }}>
@@ -189,7 +189,7 @@ export default function FAQSection() {
                 transition={{ duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
-                  <span className="font-mono-label" style={{ color: "#C8A020", whiteSpace: "nowrap" }}>{cat.category}</span>
+                  <span className="font-mono-label" style={{ color: "var(--orange)", whiteSpace: "nowrap" }}>{cat.category}</span>
                   <div style={{ flex: 1, height: "1px", background: "rgba(255,255,255,0.06)" }} />
                 </div>
                 {cat.items.map((item) => <FAQItem key={item.q} {...item} />)}
