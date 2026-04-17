@@ -18,7 +18,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ background: "#0F0C08", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+    <footer style={{ background: "#0F0C08", borderTop: "1px solid rgba(255,255,255,0.06)", borderRadius: "18px 18px 0 0" }}>
       <div aria-hidden="true" style={{
         height:     "3px",
         background: "repeating-linear-gradient(90deg,var(--orange) 0px,var(--orange) 12px,#2C2C2C 12px,#2C2C2C 16px,#0F0C08 16px,#0F0C08 34px)",
@@ -31,7 +31,7 @@ export default function Footer() {
           <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
             <div style={{
               width: "28px", height: "28px", background: "var(--orange)",
-              clipPath: "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)",
+              borderRadius: "8px",
               display: "flex", alignItems: "center", justifyContent: "center",
             }} aria-hidden="true">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -42,7 +42,7 @@ export default function Footer() {
               <div style={{ fontFamily: "var(--font-display), sans-serif", fontSize: "11px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#F2E8D4", lineHeight: 1 }}>
                 M Build 360
               </div>
-              <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--orange)", marginTop: "2px" }}>
+              <div style={{ fontFamily: "var(--font-display), cursive, serif", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--orange)", marginTop: "2px" }}>
                 Maçonnerie
               </div>
             </div>
@@ -73,10 +73,10 @@ export default function Footer() {
         </div>
 
         <div style={{ marginTop: "24px", paddingTop: "20px", borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "8px" }}>
-          <p style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(240,239,233,0.2)", letterSpacing: "0.06em" }}>
+          <p style={{ fontFamily: "var(--font-display), cursive, serif", fontSize: "9px", color: "rgba(240,239,233,0.2)", letterSpacing: "0.06em" }}>
             © {year} M Build 360 SRL — TVA BE 0000.000.000
           </p>
-          <p style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(200,160,32,0.22)", letterSpacing: "0.06em" }}>
+          <p style={{ fontFamily: "var(--font-display), cursive, serif", fontSize: "9px", color: "rgba(200,160,32,0.22)", letterSpacing: "0.06em" }}>
             [ REV 1.0 — BRUXELLES ]
           </p>
         </div>

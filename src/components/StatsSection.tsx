@@ -53,7 +53,7 @@ function StatItem({
       <div style={{ display: "flex", alignItems: "flex-end", gap: "2px" }}>
         <span className="stat-number">{count}</span>
         <span style={{
-          fontFamily:         "var(--font-mono), monospace",
+          fontFamily:         "var(--font-display), cursive, serif",
           fontSize:           "clamp(22px, 3.5vw, 44px)",
           fontWeight:         700,
           color:              "var(--orange)",
@@ -67,7 +67,7 @@ function StatItem({
       </div>
 
       <div style={{
-        fontFamily:    "var(--font-display), 'Arial Black', sans-serif",
+        fontFamily:    "var(--font-display), cursive, serif",
         fontSize:      "13px", fontWeight: 400,
         textTransform: "uppercase", letterSpacing: "0.04em",
         color:         "#F2E8D4", marginTop: "4px",
@@ -109,7 +109,7 @@ export default function StatsSection() {
     >
       <div aria-hidden="true" style={{
         position:      "absolute", top: "16px", right: "24px",
-        fontFamily:    "var(--font-mono), monospace",
+        fontFamily:    "var(--font-display), cursive, serif",
         fontSize:      "9px", fontWeight: 700,
         color:         "rgba(200,160,32,0.22)",
         letterSpacing: "0.12em", textTransform: "uppercase",

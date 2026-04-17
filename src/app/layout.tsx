@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Outfit, JetBrains_Mono } from "next/font/google";
+import { Dancing_Script } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./structured-data";
 
-const outfit = Outfit({
+const fontCursive = Dancing_Script({
   subsets: ["latin"],
   variable: "--font-display",
-  display: "swap",
-  preload: true,
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
   weight: ["400", "700"],
   display: "swap",
   preload: true,
@@ -99,7 +92,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr-BE" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
+    <html lang="fr-BE" className={fontCursive.variable}>
       <body>
         <StructuredData />
         {children}

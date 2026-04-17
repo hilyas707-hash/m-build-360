@@ -130,7 +130,7 @@ export default function MentionsLegalesPage() {
           <p
             style={{
               marginTop:     "56px",
-              fontFamily:    "var(--font-mono), monospace",
+              fontFamily:    "var(--font-display), cursive, serif",
               fontSize:      "10px",
               color:         "rgba(242,232,212,0.28)",
               letterSpacing: "0.1em",

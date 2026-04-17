@@ -60,7 +60,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
     <div>
       <button className="faq-trigger" onClick={() => setOpen(!open)} data-open={open} aria-expanded={open}>
         <span style={{
-          fontFamily:    "var(--font-display), 'Arial Black', sans-serif",
+          fontFamily:    "var(--font-display), cursive, serif",
           fontSize:      "clamp(14px, 1.8vw, 16px)",
           fontWeight:    400,
           color:         open ? "#F2E8D4" : "rgba(242,232,212,0.82)",
@@ -150,7 +150,7 @@ export default function FAQSection() {
                     padding:       "11px 0 11px 18px",
                     borderLeft:    "2px solid rgba(255,255,255,0.07)",
                     color:         "rgba(242,232,212,0.5)",
-                    fontFamily:    "var(--font-mono), monospace",
+                    fontFamily:    "var(--font-display), cursive, serif",
                     fontSize:      "11px", fontWeight: 700,
                     letterSpacing: "0.08em", textTransform: "uppercase",
                     textDecoration: "none",

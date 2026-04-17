@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, X, CaretDown } from "@phosphor-icons/react";
@@ -20,11 +20,34 @@ const navLinks = [
 
 const EASE = [0.32, 0.72, 0, 1] as const;
 
+const DROP_CLOSE_MS = 320;
+
 export default function Navbar() {
   const [open,     setOpen]     = useState(false);
   const [drop,     setDrop]     = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const dropCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const cancelDropClose = useCallback(() => {
+    if (dropCloseTimer.current) {
+      clearTimeout(dropCloseTimer.current);
+      dropCloseTimer.current = null;
+    }
+  }, []);
+
+  const openServicesDrop = useCallback(() => {
+    cancelDropClose();
+    setDrop(true);
+  }, [cancelDropClose]);
+
+  const scheduleServicesDropClose = useCallback(() => {
+    cancelDropClose();
+    dropCloseTimer.current = setTimeout(() => {
+      setDrop(false);
+      dropCloseTimer.current = null;
+    }, DROP_CLOSE_MS);
+  }, [cancelDropClose]);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 48);
@@ -36,6 +59,8 @@ export default function Navbar() {
     document.body.style.overflow = open ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [open]);
+
+  useEffect(() => () => cancelDropClose(), [cancelDropClose]);
 
   const servicesActive = pathname.startsWith("/services");
 
@@ -49,6 +74,7 @@ export default function Navbar() {
         borderBottom:         `1px solid ${scrolled ? "rgba(255,255,255,0.06)" : "transparent"}`,
         backdropFilter:       scrolled ? "blur(20px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
+        borderRadius: scrolled ? "0 0 18px 18px" : "0",
       }}>
         <div aria-hidden="true" style={{ height: "2px", background: "linear-gradient(90deg, var(--orange) 0%, rgba(200,160,32,0.4) 60%, transparent 100%)" }} />
 
@@ -61,7 +87,7 @@ export default function Navbar() {
           <a href="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", flexShrink: 0 }}>
             <div style={{
               width: "32px", height: "32px", background: "var(--orange)",
-              clipPath: "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)",
+              borderRadius: "10px",
               display: "flex", alignItems: "center", justifyContent: "center",
             }} aria-hidden="true">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -70,17 +96,17 @@ export default function Navbar() {
             </div>
             <div>
               <div style={{
-                fontFamily: "var(--font-display), 'Arial Black', sans-serif",
-                fontSize: "13px", fontWeight: 400,
-                letterSpacing: "0.06em", textTransform: "uppercase",
+                fontFamily: "var(--font-display), cursive, serif",
+                fontSize: "17px", fontWeight: 700,
+                letterSpacing: "0.03em",
                 color: "#F2E8D4", lineHeight: 1,
               }}>
                 M Build 360
               </div>
               <div style={{
-                fontFamily: "var(--font-mono), monospace",
-                fontSize: "8px", letterSpacing: "0.2em",
-                textTransform: "uppercase", color: "var(--orange)", marginTop: "2px",
+                fontFamily: "var(--font-display), cursive, serif",
+                fontSize: "12px", letterSpacing: "0.06em",
+                color: "var(--orange)", marginTop: "2px",
               }}>
                 Maçonnerie
               </div>
@@ -90,22 +116,30 @@ export default function Navbar() {
           {/* Desktop nav */}
           <div className="hidden md:flex" style={{ alignItems: "center", gap: "4px", flex: 1, justifyContent: "center" }}>
 
-            {/* Dropdown services */}
-            <div style={{ position: "relative" }} onMouseLeave={() => setDrop(false)}>
+            {/* Dropdown services — pont de survol + fermeture différée */}
+            <div
+              style={{ position: "relative" }}
+              onMouseEnter={openServicesDrop}
+              onMouseLeave={scheduleServicesDropClose}
+            >
               <button
-                onMouseEnter={() => setDrop(true)}
-                onClick={() => setDrop((v) => !v)}
+                type="button"
+                onClick={() => {
+                  cancelDropClose();
+                  setDrop((v) => !v);
+                }}
                 aria-haspopup="true"
                 aria-expanded={drop}
                 style={{
-                  display:       "flex", alignItems: "center", gap: "5px",
-                  padding:       "8px 14px",
+                  display:       "flex", alignItems: "center", gap: "6px",
+                  padding:       "9px 16px",
                   background:    servicesActive ? "rgba(200,160,32,0.1)" : "transparent",
                   border:        `1px solid ${servicesActive ? "rgba(200,160,32,0.3)" : "transparent"}`,
+                  borderRadius:  "14px",
                   cursor:        "pointer",
-                  fontFamily:    "var(--font-mono), monospace",
-                  fontSize:      "10px", fontWeight: 700,
-                  letterSpacing: "0.1em", textTransform: "uppercase",
+                  fontFamily:    "var(--font-display), cursive, serif",
+                  fontSize:      "15px", fontWeight: 700,
+                  letterSpacing: "0.03em",
                   color:         servicesActive ? "var(--orange)" : "rgba(242,232,212,0.65)",
                   transition:    "all 0.18s",
                   touchAction:   "manipulation",
@@ -117,61 +151,74 @@ export default function Navbar() {
                 </motion.span>
               </button>
 
-              <AnimatePresence>
-                {drop && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 4 }}
-                    transition={{ duration: 0.18, ease: EASE }}
-                    style={{
-                      position:   "absolute",
-                      top:        "calc(100% + 8px)",
-                      left:       "-8px",
-                      width:      "310px",
-                      background: "#0F0B08",
-                      border:     "1px solid rgba(255,255,255,0.08)",
-                      borderTop:  "2px solid var(--orange)",
-                      zIndex:     300,
-                    }}
-                  >
-                    {serviceLinks.map((s, i) => (
-                      <a
-                        key={s.slug}
-                        href={`/services/${s.slug}`}
-                        onClick={() => setDrop(false)}
-                        style={{
-                          display:        "flex", alignItems: "center", gap: "14px",
-                          padding:        "14px 18px",
-                          textDecoration: "none",
-                          borderBottom:   i < serviceLinks.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none",
-                          borderLeft:     pathname === `/services/${s.slug}` ? "2px solid var(--orange)" : "2px solid transparent",
-                          transition:     "background 0.15s",
-                        }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(200,160,32,0.07)"; }}
-                        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}
-                      >
-                        <span style={{
-                          fontFamily:    "var(--font-mono), monospace",
-                          fontSize:      "9px", fontWeight: 700,
-                          color:         "var(--orange)", letterSpacing: "0.1em",
-                          flexShrink:    0,
-                        }}>
-                          {s.id}
-                        </span>
-                        <div>
-                          <div style={{ fontFamily: "var(--font-display), sans-serif", fontSize: "12px", color: "#F2E8D4", letterSpacing: "0.02em" }}>
-                            {s.label}
+              <div
+                style={{
+                  position: "absolute",
+                  top:      "100%",
+                  left:     "-8px",
+                  minWidth: "326px",
+                  paddingTop: "12px",
+                  zIndex:   300,
+                }}
+              >
+                <AnimatePresence>
+                  {drop && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 4 }}
+                      transition={{ duration: 0.2, ease: EASE }}
+                      style={{
+                        width:      "310px",
+                        background: "rgba(15, 11, 8, 0.98)",
+                        border:     "1px solid rgba(255,255,255,0.1)",
+                        borderTop:  "3px solid var(--orange)",
+                        borderRadius: "16px",
+                        overflow:   "hidden",
+                        boxShadow:  "0 24px 48px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06)",
+                      }}
+                    >
+                      {serviceLinks.map((s, i) => (
+                        <a
+                          key={s.slug}
+                          href={`/services/${s.slug}`}
+                          onClick={() => {
+                            cancelDropClose();
+                            setDrop(false);
+                          }}
+                          style={{
+                            display:        "flex", alignItems: "center", gap: "14px",
+                            padding:        "14px 18px",
+                            textDecoration: "none",
+                            borderBottom:   i < serviceLinks.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none",
+                            borderLeft:     pathname === `/services/${s.slug}` ? "3px solid var(--orange)" : "3px solid transparent",
+                            transition:     "background 0.15s",
+                          }}
+                          onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(200,160,32,0.07)"; }}
+                          onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}
+                        >
+                          <span style={{
+                            fontFamily:    "var(--font-display), cursive, serif",
+                            fontSize:      "14px", fontWeight: 700,
+                            color:         "var(--orange)", letterSpacing: "0.04em",
+                            flexShrink:    0,
+                          }}>
+                            {s.id}
+                          </span>
+                          <div>
+                            <div style={{ fontFamily: "var(--font-display), cursive, serif", fontSize: "16px", color: "#F2E8D4", letterSpacing: "0.02em" }}>
+                              {s.label}
+                            </div>
+                            <div style={{ fontFamily: "var(--font-display), cursive, serif", fontSize: "13px", color: "rgba(242,232,212,0.48)", letterSpacing: "0.03em", marginTop: "2px" }}>
+                              {s.sub}
+                            </div>
                           </div>
-                          <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(242,232,212,0.38)", letterSpacing: "0.08em", marginTop: "2px" }}>
-                            {s.sub}
-                          </div>
-                        </div>
-                      </a>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                        </a>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
 
             {navLinks.map((l) => (
@@ -180,7 +227,7 @@ export default function Navbar() {
                 href={l.href}
                 style={{
                   padding:       "8px 14px",
-                  fontFamily:    "var(--font-mono), monospace",
+                  fontFamily:    "var(--font-display), cursive, serif",
                   fontSize:      "10px", fontWeight: 700,
                   letterSpacing: "0.1em", textTransform: "uppercase",
                   color:         "rgba(242,232,212,0.65)",
@@ -202,7 +249,7 @@ export default function Navbar() {
               href="tel:+3200000000"
               style={{
                 display:       "flex", alignItems: "center", gap: "7px",
-                fontFamily:    "var(--font-mono), monospace",
+                fontFamily:    "var(--font-display), cursive, serif",
                 fontSize:      "11px", fontWeight: 700,
                 letterSpacing: "0.06em",
                 color:         "rgba(242,232,212,0.6)",
@@ -320,7 +367,7 @@ export default function Navbar() {
               flexShrink:     0,
             }}>
               <span style={{
-                fontFamily:    "var(--font-mono), monospace",
+                fontFamily:    "var(--font-display), cursive, serif",
                 fontSize:      "9px", fontWeight: 700,
                 letterSpacing: "0.14em", textTransform: "uppercase",
                 color:         "rgba(242,232,212,0.4)",
@@ -362,7 +409,7 @@ export default function Navbar() {
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}
                 >
                   <span style={{
-                    fontFamily:    "var(--font-mono), monospace",
+                    fontFamily:    "var(--font-display), cursive, serif",
                     fontSize:      "10px", fontWeight: 700,
                     color:         "var(--orange)", flexShrink: 0,
                   }}>
@@ -372,7 +419,7 @@ export default function Navbar() {
                     <div style={{ fontFamily: "var(--font-display), sans-serif", fontSize: "13px", color: "#F2E8D4" }}>
                       {s.label}
                     </div>
-                    <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: "9px", color: "rgba(242,232,212,0.35)", marginTop: "2px" }}>
+                    <div style={{ fontFamily: "var(--font-display), cursive, serif", fontSize: "9px", color: "rgba(242,232,212,0.35)", marginTop: "2px" }}>
                       {s.sub}
                     </div>
                   </div>
@@ -389,7 +436,7 @@ export default function Navbar() {
                   style={{
                     display:        "flex", alignItems: "center",
                     minHeight:      "56px", padding: "0 20px",
-                    fontFamily:     "var(--font-mono), monospace",
+                    fontFamily:     "var(--font-display), cursive, serif",
                     fontSize:       "10px", fontWeight: 700,
                     letterSpacing:  "0.12em", textTransform: "uppercase",
                     color:          "rgba(242,232,212,0.62)",

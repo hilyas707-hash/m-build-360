@@ -109,7 +109,7 @@ export default function CookiesPage() {
                   </h2>
                   <span
                     style={{
-                      fontFamily:    "var(--font-mono), monospace",
+                      fontFamily:    "var(--font-display), cursive, serif",
                       fontSize:      "9px",
                       fontWeight:    700,
                       letterSpacing: "0.12em",
@@ -154,7 +154,7 @@ export default function CookiesPage() {
                               style={{
                                 padding:       "10px 20px",
                                 textAlign:     "left",
-                                fontFamily:    "var(--font-mono), monospace",
+                                fontFamily:    "var(--font-display), cursive, serif",
                                 fontSize:      "9px",
                                 fontWeight:    700,
                                 letterSpacing: "0.12em",
@@ -177,7 +177,7 @@ export default function CookiesPage() {
                             <td
                               style={{
                                 padding:    "12px 20px",
-                                fontFamily: "var(--font-mono), monospace",
+                                fontFamily: "var(--font-display), cursive, serif",
                                 fontSize:   "11px",
                                 color:      "#F2E8D4",
                               }}
@@ -196,7 +196,7 @@ export default function CookiesPage() {
                             <td
                               style={{
                                 padding:    "12px 20px",
-                                fontFamily: "var(--font-mono), monospace",
+                                fontFamily: "var(--font-display), cursive, serif",
                                 fontSize:   "11px",
                                 color:      "rgba(242,232,212,0.45)",
                                 whiteSpace: "nowrap",
@@ -282,7 +282,7 @@ export default function CookiesPage() {
           <p
             style={{
               marginTop:     "48px",
-              fontFamily:    "var(--font-mono), monospace",
+              fontFamily:    "var(--font-display), cursive, serif",
               fontSize:      "10px",
               color:         "rgba(242,232,212,0.28)",
               letterSpacing: "0.1em",

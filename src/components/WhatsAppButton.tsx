@@ -61,8 +61,10 @@ export default function WhatsAppButton() {
               background:    "#0f0f0f",
               border:        "1px solid rgba(255,255,255,0.08)",
               borderTop:     "2px solid #1DB954",
+              borderRadius:  "18px",
               transformOrigin: "bottom right",
               overflow:      "hidden",
+              boxShadow:     "inset 0 1px 0 rgba(255,255,255,0.06)",
             }}
           >
             {/* Label source */}
@@ -77,7 +79,7 @@ export default function WhatsAppButton() {
             >
               <span
                 style={{
-                  fontFamily:    "var(--font-mono), monospace",
+                  fontFamily:    "var(--font-display), cursive, serif",
                   fontSize:      "9px",
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",

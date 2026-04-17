@@ -193,7 +193,7 @@ export default function ActualitesSection() {
                 <a
                   href="#contact"
                   style={{
-                    fontFamily:    "var(--font-mono), monospace",
+                    fontFamily:    "var(--font-display), cursive, serif",
                     fontSize:      "11px",
                     fontWeight:    700,
                     letterSpacing: "0.1em",
@@ -300,7 +300,7 @@ export default function ActualitesSection() {
                     position:      "absolute",
                     bottom:        "16px",
                     right:         "20px",
-                    fontFamily:    "var(--font-mono), monospace",
+                    fontFamily:    "var(--font-display), cursive, serif",
                     fontSize:      "9px",
                     fontWeight:    700,
                     color:         "rgba(200,160,32,0.2)",

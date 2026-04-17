@@ -339,7 +339,7 @@ export default function ServiceDetailContent({ service }: Props) {
                     display:        "inline-flex",
                     alignItems:     "center",
                     gap:            "6px",
-                    fontFamily:     "var(--font-mono), monospace",
+                    fontFamily:     "var(--font-display), cursive, serif",
                     fontSize:       "10px",
                     letterSpacing:  "0.08em",
                     textTransform:  "uppercase",
@@ -455,7 +455,7 @@ export default function ServiceDetailContent({ service }: Props) {
                     alignItems:     "center",
                     gap:            "6px",
                     marginTop:      "24px",
-                    fontFamily:     "var(--font-mono), monospace",
+                    fontFamily:     "var(--font-display), cursive, serif",
                     fontSize:       "9px",
                     letterSpacing:  "0.12em",
                     textTransform:  "uppercase",
@@ -483,7 +483,7 @@ export default function ServiceDetailContent({ service }: Props) {
               marginTop:  "20px",
               fontSize:   "11px",
               color:      "rgba(242,232,212,0.28)",
-              fontFamily: "var(--font-mono), monospace",
+              fontFamily: "var(--font-display), cursive, serif",
               letterSpacing: "0.04em",
             }}
           >
